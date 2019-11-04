@@ -17,7 +17,7 @@
 <meta property="og:description" content="前端工程化代码一般通过  包(package) (或者称为 模块（module）) 的方式来共享，因此你可以通过它使用全世界开发者的代码，或者分享自己的代码。开发者通常运用包管理工具来安装项目所需的依赖，因此出现许多包管理工具，比如：npm、yarn、bower等。  本文将带大家初步了解yarn和npm。 什么是 Npm，Yarn1.npm 简介npm 即：npm package manager">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;15521290-ce50a287c6f543e8.jpeg?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
-<meta property="og:updated_time" content="2019-11-04T09:35:59.840Z">
+<meta property="og:updated_time" content="2019-11-04T09:40:16.675Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;15521290-ce50a287c6f543e8.jpeg?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
   
@@ -153,7 +153,7 @@
 <p><code>npm</code> 由三个不同的部分组成：网站，注册表和 CLI 。该网站是用户发现软件包的主要工具，注册表是一个关于软件包信息的大型数据库，而 CLI 则是开发者如何在注册表上发布他们的软件包或下载他们希望安装的软件包。更多详细内容，可参见 <a href="https://docs.npmjs.com/getting-started/what-is-npm" target="_blank" rel="noopener">what-is-npm</a>。</p>
 <h5 id="2-yarn-简介"><a href="#2-yarn-简介" class="headerlink" title="2.yarn 简介"></a>2.yarn 简介</h5><p><code>yarn</code> 对你的代码来说是一个包管理器， 你可以通过它使用全世界开发者的代码，或者分享自己的代码。 <code>yarn</code> 做这些快捷、安全、可靠，所以你不用担心什么。通过 <code>yarn</code>，你可以使用其他开发者针对不同问题的解决方案，使自己的开发过程更简单。 使用过程中遇到问题，你可以将其上报或者贡献解决方案。一旦问题被修复，Yarn会更新保持同步。</p>
 <p><code>yarn</code> 是 Facebook, Google, Exponent 和 Tilde 开发的一款新的 JavaScript 包管理工具。它并没有试图完全取代 <code>npm</code>。<code>yarn</code> 同样是一个从 <code>npm</code> 注册源获取模块的新的 CLI 客户端。注册的方式不会有任何变化 —— 你同样可以正常获取与发布包。它存在的目的是解决团队在使用 <code>npm</code> 面临的少数问题。当然，在 Node 版本断更替中，<code>npm</code> 本身也在积极更新</p>
-<h1 id="关于安装-更新"><a href="#关于安装-更新" class="headerlink" title="关于安装/更新"></a>关于安装/更新</h1><h5 id="1-npm-安装-更新"><a href="#1-npm-安装-更新" class="headerlink" title="1.npm 安装/更新"></a>1.npm 安装/更新</h5><ul>
+<h1 id="安装-更新"><a href="#安装-更新" class="headerlink" title="安装/更新"></a>安装/更新</h1><h5 id="1-npm-安装-更新"><a href="#1-npm-安装-更新" class="headerlink" title="1.npm 安装/更新"></a>1.npm 安装/更新</h5><ul>
 <li>安装</li>
 </ul>
 <p><code>npm</code> 开始作为 Node 包管理器，所以它的安装是跟 Node.js 捆绑在一起的。至于如何安装 Node.js, Npm 官方，在 <a href="https://docs.npmjs.com/getting-started/installing-node" target="_blank" rel="noopener">Installing Node.js and updating npm</a> 做了阐述。之前在不同平台尝试更新 Node.js 之时，也是遇到过各种问题，有在 <a href="https://www.jianshu.com/p/019b10b948b6" target="_blank" rel="noopener">NodeJs 升级/安装折腾记</a> 一文做了记载；折腾许久，得出的结论跟官网一致：</p>
@@ -164,8 +164,10 @@
 <li>更新</li>
 </ul>
 <ol>
-<li>npm install npm@latest -g （npm install npm -g）</li>
-<li>更新(重新下载) Node.js</li>
+<li><p>npm install npm@latest -g （npm install npm -g）</p>
+</li>
+<li><p>更新(重新下载) Node.js</p>
+</li>
 </ol>
 <h5 id="2-yarn-安装-更新"><a href="#2-yarn-安装-更新" class="headerlink" title="2.yarn 安装/更新"></a>2.yarn 安装/更新</h5><ul>
 <li>安装</li>
@@ -369,13 +371,14 @@
 <h1 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h1><blockquote>
 <p>对比后发现，似乎yarn在各方面全面领先于npm。事实上，在npm5之前，yarn的优势特别明显。但是在npm5改进之后，二者差距不大， npm5值得尝试！</p>
 </blockquote>
-<h4 id="个人建议：如果你已经在个人项目上使用-yarn-，并且没有遇到更多问题，目前完全可以继续使用。但如果有兼容-npm-的场景，或者身处在使用-npm-，cnpm-的团队，以及还没有切到-yarn-的项目，那现在就可以试一试-npm5-了。"><a href="#个人建议：如果你已经在个人项目上使用-yarn-，并且没有遇到更多问题，目前完全可以继续使用。但如果有兼容-npm-的场景，或者身处在使用-npm-，cnpm-的团队，以及还没有切到-yarn-的项目，那现在就可以试一试-npm5-了。" class="headerlink" title="个人建议：如果你已经在个人项目上使用 yarn ，并且没有遇到更多问题，目前完全可以继续使用。但如果有兼容 npm 的场景，或者身处在使用 npm ，cnpm 的团队，以及还没有切到 yarn  的项目，那现在就可以试一试 npm5 了。"></a>个人建议：如果你已经在个人项目上使用 <code>yarn</code> ，并且没有遇到更多问题，目前完全可以继续使用。但如果有兼容 <code>npm</code> 的场景，或者身处在使用 <code>npm</code> ，<code>cnpm</code> 的团队，以及还没有切到 <code>yarn</code>  的项目，那现在就可以试一试 <code>npm5</code> 了。</h4><blockquote>
+<p> 个人建议：<strong>如果你已经在个人项目上使用 <code>yarn</code> ，并且没有遇到更多问题，目前完全可以继续使用。但如果有兼容 <code>npm</code> 的场景，或者身处在使用 <code>npm</code> ，<code>cnpm</code> 的团队，以及还没有切到 <code>yarn</code>  的项目，那现在就可以试一试 <code>npm5</code> 了。</strong></p>
+<blockquote>
 <p>更多文章：<a href="https://www.jianshu.com/u/649e58f62c02" target="_blank" rel="noopener">前端文章</a><br>原文出处：<a href="https://www.jianshu.com/p/e57e63fb5120" target="_blank" rel="noopener">Npm vs Yarn 之备忘详单</a></p>
 </blockquote>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年11月04日 17:35</p>
+        <p>最后更新： 2019年11月04日 17:40</p>
         <p>原始链接： <a class="post-url" href="/2019/10/30/blog-008/" title="Npm vs Yarn">Npm vs Yarn</a></p>
         <p>极速通道： <a class="post-url" href=" http://myangyang.gitee.io" target="_blank" rel="noopener" title="极速通道国内服务器">国内服务器</a></p>
         <footer>
@@ -498,7 +501,7 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#什么是-Npm，Yarn"><span class="post-toc-text">什么是 Npm，Yarn</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-npm-简介"><span class="post-toc-text">1.npm 简介</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-yarn-简介"><span class="post-toc-text">2.yarn 简介</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#关于安装-更新"><span class="post-toc-text">关于安装/更新</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-npm-安装-更新"><span class="post-toc-text">1.npm 安装/更新</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-yarn-安装-更新"><span class="post-toc-text">2.yarn 安装/更新</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#npm-与-yarn-常用命令对比"><span class="post-toc-text">npm 与 yarn 常用命令对比</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#有所区别的命令"><span class="post-toc-text">有所区别的命令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#相同操作的命令"><span class="post-toc-text">相同操作的命令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Npm-独有的命令"><span class="post-toc-text">Npm 独有的命令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Yarn-独有的命令"><span class="post-toc-text">Yarn 独有的命令</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#关于-package-lock-json-和-yarn-lock"><span class="post-toc-text">关于 package-lock.json 和 yarn.lock</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于-yarn-lock"><span class="post-toc-text">关于 yarn.lock</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于-package-lock-json"><span class="post-toc-text">关于 package-lock.json</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#对比-npm，yarn-的优点"><span class="post-toc-text">对比 npm，yarn 的优点</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#小结"><span class="post-toc-text">小结</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#个人建议：如果你已经在个人项目上使用-yarn-，并且没有遇到更多问题，目前完全可以继续使用。但如果有兼容-npm-的场景，或者身处在使用-npm-，cnpm-的团队，以及还没有切到-yarn-的项目，那现在就可以试一试-npm5-了。"><span class="post-toc-text">个人建议：如果你已经在个人项目上使用 yarn ，并且没有遇到更多问题，目前完全可以继续使用。但如果有兼容 npm 的场景，或者身处在使用 npm ，cnpm 的团队，以及还没有切到 yarn  的项目，那现在就可以试一试 npm5 了。</span></a></li></ol></li></ol></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#什么是-Npm，Yarn"><span class="post-toc-text">什么是 Npm，Yarn</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-npm-简介"><span class="post-toc-text">1.npm 简介</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-yarn-简介"><span class="post-toc-text">2.yarn 简介</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装-更新"><span class="post-toc-text">安装/更新</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#1-npm-安装-更新"><span class="post-toc-text">1.npm 安装/更新</span></a></li><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#2-yarn-安装-更新"><span class="post-toc-text">2.yarn 安装/更新</span></a></li></ol></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#npm-与-yarn-常用命令对比"><span class="post-toc-text">npm 与 yarn 常用命令对比</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#有所区别的命令"><span class="post-toc-text">有所区别的命令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#相同操作的命令"><span class="post-toc-text">相同操作的命令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Npm-独有的命令"><span class="post-toc-text">Npm 独有的命令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Yarn-独有的命令"><span class="post-toc-text">Yarn 独有的命令</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#关于-package-lock-json-和-yarn-lock"><span class="post-toc-text">关于 package-lock.json 和 yarn.lock</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于-yarn-lock"><span class="post-toc-text">关于 yarn.lock</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于-package-lock-json"><span class="post-toc-text">关于 package-lock.json</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#对比-npm，yarn-的优点"><span class="post-toc-text">对比 npm，yarn 的优点</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#小结"><span class="post-toc-text">小结</span></a></li></ol>
         </nav>
     </aside>
     
