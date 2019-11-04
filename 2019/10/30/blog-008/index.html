@@ -17,7 +17,7 @@
 <meta property="og:description" content="前端工程化代码一般通过  包(package) (或者称为 模块（module）) 的方式来共享，因此你可以通过它使用全世界开发者的代码，或者分享自己的代码。开发者通常运用包管理工具来安装项目所需的依赖，因此出现许多包管理工具，比如：npm、yarn、bower等。  本文将带大家初步了解yarn和npm。 什么是 Npm，Yarn1.npm 简介npm 即：npm package manager">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;15521290-ce50a287c6f543e8.jpeg?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
-<meta property="og:updated_time" content="2019-11-04T09:32:26.769Z">
+<meta property="og:updated_time" content="2019-11-04T09:35:59.840Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;15521290-ce50a287c6f543e8.jpeg?imageMogr2&#x2F;auto-orient&#x2F;strip%7CimageView2&#x2F;2&#x2F;w&#x2F;1240">
   
@@ -327,11 +327,16 @@
 <p><span style="color: red">Module build failed: ModuleBuildError: Module build failed: Error: Node Sass does not yet support your current environment:<br>This usually happens because your environment has changed since running npm install. Run npm rebuild node-sass to build the binding for your current environment.</span></p>
 </blockquote>
 <h3 id="Yarn-独有的命令"><a href="#Yarn-独有的命令" class="headerlink" title="Yarn 独有的命令"></a><strong>Yarn 独有的命令</strong></h3><ul>
-<li><a href="https://yarnpkg.com/zh-Hans/docs/cli/import" target="_blank" rel="noopener">yarn import</a>：依据原npm安装后的<code>node_modules</code>目录生成一份<code>yarn.lock</code>文件；</li>
-<li><a href="https://yarnpkg.com/zh-Hans/docs/cli/licenses" target="_blank" rel="noopener">yarn licenses</a>：列出已安装包的许可证信息；</li>
-<li><a href="https://yarnpkg.com/zh-Hans/docs/cli/pack" target="_blank" rel="noopener">yarn pack</a>：创建一个压缩的包依赖 gzip 档案；</li>
-<li><a href="https://yarnpkg.com/zh-Hans/docs/cli/why" target="_blank" rel="noopener">yarn why</a>：显示有关一个包为何被安装的信息。</li>
-<li><a href="https://yarnpkg.com/zh-Hans/docs/cli/autoclean" target="_blank" rel="noopener">yarn autoclean</a>：从包依赖里清除并移除不需要的文件。</li>
+<li><p><a href="https://yarnpkg.com/zh-Hans/docs/cli/import" target="_blank" rel="noopener">yarn import</a>：依据原npm安装后的<code>node_modules</code>目录生成一份<code>yarn.lock</code>文件；</p>
+</li>
+<li><p><a href="https://yarnpkg.com/zh-Hans/docs/cli/licenses" target="_blank" rel="noopener">yarn licenses</a>：列出已安装包的许可证信息；</p>
+</li>
+<li><p><a href="https://yarnpkg.com/zh-Hans/docs/cli/pack" target="_blank" rel="noopener">yarn pack</a>：创建一个压缩的包依赖 gzip 档案；</p>
+</li>
+<li><p><a href="https://yarnpkg.com/zh-Hans/docs/cli/why" target="_blank" rel="noopener">yarn why</a>：显示有关一个包为何被安装的信息。</p>
+</li>
+<li><p><a href="https://yarnpkg.com/zh-Hans/docs/cli/autoclean" target="_blank" rel="noopener">yarn autoclean</a>：从包依赖里清除并移除不需要的文件。</p>
+</li>
 </ul>
 <h2 id="关于-package-lock-json-和-yarn-lock"><a href="#关于-package-lock-json-和-yarn-lock" class="headerlink" title="关于 package-lock.json 和 yarn.lock"></a><strong>关于 package-lock.json 和 yarn.lock</strong></h2><h3 id="关于-yarn-lock"><a href="#关于-yarn-lock" class="headerlink" title="关于 yarn.lock"></a><strong>关于 yarn.lock</strong></h3><p>有时候一个项目周期很长，在不断开发的同时，而依赖的库也会有很大改变；有时候你可能只想运行 <code>npm i</code> 更新没有下载的插件，却不想偶尔会将依赖的一些其他插件更到最新，导致各种奇葩问题；<code>package-lock.json</code> 和 <code>yarn.lock</code> 就是为解决这种问题而设定的存在。</p>
 <p>使用 <code>npm</code> 或者 <code>yarn</code>，都会有 <code>pacakge.json</code> 这个文件，用以标出自己项目对 各库包的依赖。举个例子来说，你的项目中有如下依赖：</p>
@@ -365,12 +370,12 @@
 <p>对比后发现，似乎yarn在各方面全面领先于npm。事实上，在npm5之前，yarn的优势特别明显。但是在npm5改进之后，二者差距不大， npm5值得尝试！</p>
 </blockquote>
 <h4 id="个人建议：如果你已经在个人项目上使用-yarn-，并且没有遇到更多问题，目前完全可以继续使用。但如果有兼容-npm-的场景，或者身处在使用-npm-，cnpm-的团队，以及还没有切到-yarn-的项目，那现在就可以试一试-npm5-了。"><a href="#个人建议：如果你已经在个人项目上使用-yarn-，并且没有遇到更多问题，目前完全可以继续使用。但如果有兼容-npm-的场景，或者身处在使用-npm-，cnpm-的团队，以及还没有切到-yarn-的项目，那现在就可以试一试-npm5-了。" class="headerlink" title="个人建议：如果你已经在个人项目上使用 yarn ，并且没有遇到更多问题，目前完全可以继续使用。但如果有兼容 npm 的场景，或者身处在使用 npm ，cnpm 的团队，以及还没有切到 yarn  的项目，那现在就可以试一试 npm5 了。"></a>个人建议：如果你已经在个人项目上使用 <code>yarn</code> ，并且没有遇到更多问题，目前完全可以继续使用。但如果有兼容 <code>npm</code> 的场景，或者身处在使用 <code>npm</code> ，<code>cnpm</code> 的团队，以及还没有切到 <code>yarn</code>  的项目，那现在就可以试一试 <code>npm5</code> 了。</h4><blockquote>
-<p>更多文章：<a href="https://www.jianshu.com/u/649e58f62c02" target="_blank" rel="noopener">简书</a><br>原文出处：<a href="https://www.jianshu.com/p/e57e63fb5120" target="_blank" rel="noopener">Npm vs Yarn 之备忘详单</a></p>
+<p>更多文章：<a href="https://www.jianshu.com/u/649e58f62c02" target="_blank" rel="noopener">前端文章</a><br>原文出处：<a href="https://www.jianshu.com/p/e57e63fb5120" target="_blank" rel="noopener">Npm vs Yarn 之备忘详单</a></p>
 </blockquote>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年11月04日 17:32</p>
+        <p>最后更新： 2019年11月04日 17:35</p>
         <p>原始链接： <a class="post-url" href="/2019/10/30/blog-008/" title="Npm vs Yarn">Npm vs Yarn</a></p>
         <p>极速通道： <a class="post-url" href=" http://myangyang.gitee.io" target="_blank" rel="noopener" title="极速通道国内服务器">国内服务器</a></p>
         <footer>
