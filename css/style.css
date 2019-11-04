@@ -129,8 +129,9 @@ body {
   -webkit-text-size-adjust: 100%;
   position: relative;
 }
-#cy-cmt-list,
-#pop_ad {
+#cy-cmt-list #feedAv,
+#pop_ad,
+.section-service-w {
   display: none !important;
 }
 .outer {
