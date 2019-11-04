@@ -131,7 +131,7 @@ body {
 }
 #cy-cmt-list #feedAv,
 #pop_ad,
-.section-service-w {
+#main #SOHUCS #SOHU_MAIN .module-cmt-footer .section-service-w {
   display: none !important;
 }
 .outer {
