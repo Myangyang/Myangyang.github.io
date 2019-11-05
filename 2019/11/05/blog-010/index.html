@@ -3,19 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>关于 | LEI</title>
+  <title>Deeplearn.js入门 | LEI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="LEI,LEI's Blog" />
   
-  <meta name="description" content="关于我从事 WEB 开发，主要开发语言 Javascript，熟悉使用 vue、react 等主流框架；对 vue、小程序  情有独钟；有一定的代码洁癖。 热爱开源项目、热爱新技术、热爱新事物、更热爱美女。 关于工作城市：南京 关于学习正在往终身学习者前进…近期学习方向：TS (TypeScript) 关于座右铭 The Harder You Work, The Luckier You Will">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="http:&#x2F;&#x2F;cd7.yesapi.net&#x2F;about&#x2F;index.html">
+  <meta name="description" content="Deeplearn.js入门">
+<meta name="keywords" content="JavaScript,深度学习,deeplearn.js">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Deeplearn.js入门">
+<meta property="og:url" content="http:&#x2F;&#x2F;cd7.yesapi.net&#x2F;2019&#x2F;11&#x2F;05&#x2F;blog-010&#x2F;index.html">
 <meta property="og:site_name" content="LEI">
-<meta property="og:description" content="关于我从事 WEB 开发，主要开发语言 Javascript，熟悉使用 vue、react 等主流框架；对 vue、小程序  情有独钟；有一定的代码洁癖。 热爱开源项目、热爱新技术、热爱新事物、更热爱美女。 关于工作城市：南京 关于学习正在往终身学习者前进…近期学习方向：TS (TypeScript) 关于座右铭 The Harder You Work, The Luckier You Will">
+<meta property="og:description" content="Deeplearn.js入门">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-30T02:58:59.834Z">
+<meta property="og:updated_time" content="2019-11-05T08:05:52.893Z">
 <meta name="twitter:card" content="summary">
   
   
@@ -107,20 +108,27 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-blog-010" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      关于
+      Deeplearn.js入门
     </h1>
     <div class="post-title-bar">
       <ul>
           
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/Deeplearn/">Deeplearn</a>
+                  
+              </li>
+          
         <li>
-          <i class="fa fa-calendar"></i>  2019-10-29
+          <i class="fa fa-calendar"></i>  2019-11-05
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -133,28 +141,57 @@
           
       </header>
     
-    <div class="article-entry " itemprop="articleBody">
+    <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <h3 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h3><p>从事 WEB 开发，主要开发语言 <code>Javascript</code>，熟悉使用 <code>vue</code>、<code>react</code> 等主流框架；对 <code>vue</code>、<code>小程序</code>  情有独钟；有一定的代码洁癖。</p>
-<p>热爱<code>开源项目</code>、热爱<code>新技术</code>、热爱<code>新事物</code>、更热爱<code>美女</code>。</p>
-<h3 id="关于工作"><a href="#关于工作" class="headerlink" title="关于工作"></a>关于工作</h3><p>城市：<code>南京</code></p>
-<h3 id="关于学习"><a href="#关于学习" class="headerlink" title="关于学习"></a>关于学习</h3><p>正在往终身学习者前进…<br>近期学习方向：TS (TypeScript)</p>
-<h3 id="关于座右铭"><a href="#关于座右铭" class="headerlink" title="关于座右铭"></a>关于座右铭</h3><blockquote>
-<p>The Harder You Work, The Luckier You Will Be. (越努力，越幸运)</p>
+            <h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><p><code>deeplearn.js</code> 是一款用于机器智能领域的基于硬件加速的<code>JavaScript</code>库。该库将高性能的机器学习构建模块引入到<code>web 开发</code>领域，允许我们在浏览器中训练神经网络模型或在推理模式下运行预训练的模型。<br>该库提供了两个<code>API</code>模型：一个是立即执行模型（可认为是NumPy），另一个是基于TensorFlow API镜像的延期执行模型。<code>deeplearn.js</code>最初是由Google Brain PAIR团队开发的，目的是为了构建强大的基于浏览器的交互式机器学习工具，几乎可以被应用于任何领域，包括教育、模型理解、艺术项目等。</p>
+<h1 id="2-用法"><a href="#2-用法" class="headerlink" title="2.用法"></a>2.用法</h1><h2 id="TypeScript-ES6-JavaScript"><a href="#TypeScript-ES6-JavaScript" class="headerlink" title="TypeScript/ES6 JavaScript"></a><strong>TypeScript/ES6 JavaScript</strong></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install deeplearn</span><br></pre></td></tr></table></figure>
+
+<p>该命令的作用是安装<code>deeplearn</code>的依赖包，在运行该命令之前，确保您的电脑上安装了<code>node.js</code>，去学习：<a href="/2019/10/30/blog-008/">npm &amp; yarn</a></p>
+<p>一个简单的用标量求数组之和的例子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import &#123;Array1D, NDArrayMathGPU, Scalar&#125; from &apos;deeplearn&apos;;</span><br><span class="line"></span><br><span class="line">const math = new NDArrayMathGPU();</span><br><span class="line">const a = Array1D.new([1, 2, 3]);</span><br><span class="line">const b = Scalar.new(2);</span><br><span class="line">math.scope(() =&gt; &#123;</span><br><span class="line">  const result = math.add(a, b);</span><br><span class="line">  console.log(result.getValues());  // Float32Array([3, 4, 5])</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="ES3-ES5-JavaScript"><a href="#ES3-ES5-JavaScript" class="headerlink" title="ES3/ES5 JavaScript"></a><strong>ES3/ES5 JavaScript</strong></h2><p>您也可以在普通的<code>JavaScript</code>平台上使用，直接从Google CDN上加载最新的版本库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`&lt;script src=&quot;https://storage.googleapis.com/learnjs-data/deeplearn-latest.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<p>您可以在 GitHub 的发布页寻找到特定的版本替换一个新的版本号（例如：deeplearn-0.1.0.js）。在导入该库后，可以在全局命名空间使用该<code>API</code>，名称为<code>deeplearn</code>：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var math = new deeplearn.NDArrayMathGPU();</span><br><span class="line">var a = deeplearn.Array1D.new([1, 2, 3]);</span><br><span class="line">var b = deeplearn.Scalar.new(2);</span><br><span class="line">math.scope(function() &#123;</span><br><span class="line">  var result = math.add(a, b);</span><br><span class="line">  console.log(result.getValues());  // Float32Array([3, 4, 5])</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="3-构建"><a href="#3-构建" class="headerlink" title="3.构建"></a>3.构建</h1><p>从源代码构建deeplearn.js，我们需要克隆该项目以准备好开发环境：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/PAIR-code/deeplearnjs.git</span><br><span class="line">$ cd deeplearnjs</span><br><span class="line">$ npm run prep #安装node模块和bower组件。</span><br></pre></td></tr></table></figure>
+
+<p>我们需要用Visual Studio Code作为我们的开发工具。确保安装了 <code>clang-format</code> 命令行工具以及自动格式化工具<code>Clang-Format VSCode extension</code> 。<br>demo用以下方法运行：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./scripts/watch-demo demos/nn-art/nn-art.ts</span><br></pre></td></tr></table></figure>
+
+<p>（译者注：在<code>deeplearn</code>根目录下运行该命令）运行成功后命令行会出现如下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; Starting up http-server, serving ./</span><br><span class="line">&gt;&gt; Available on:</span><br><span class="line">&gt;&gt;   http://127.0.0.1:8080</span><br><span class="line">&gt;&gt; Hit CTRL-C to stop the server</span><br><span class="line">&gt;&gt; 1357589 bytes written to dist/demos/nn-art/bundle.js (0.85 seconds) at 10:34:45 AM</span><br></pre></td></tr></table></figure>
+
+<p>然后，在浏览器中访问<a href="http://localhost:8080/demos/nn-art/nn-art-demo.html" target="_blank" rel="noopener">http://localhost:8080/demos/nn-art/nn-art-demo.html</a> 。watch-demo 的脚本监视代码增量编译（~200-400ms），因此用户可以在开发应用程序的过程中有一个快速编辑刷新周期。<br>在提交请求的时候，通过以下命令确保您的代码通过所有测试以及对程序进行了错误分析：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm run test</span><br><span class="line">$ npm run lint</span><br></pre></td></tr></table></figure>
+
+
+<p>构建一个独立的可以用script 标签导入到浏览器的ES5库：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./scripts/build-standalone.sh VERSION # 构建独立的库</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; Stored standalone library at dist/deeplearn-VERSION(.min).js</span><br></pre></td></tr></table></figure>
+
+<p>构建一个仅运行和测试的npm包：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ./scripts/build-npm.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt; Stored npm package at dist/deeplearn-VERSION.tgz</span><br></pre></td></tr></table></figure>
+
+<p>在本地安装，运行:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install ./dist/deeplearn-VERSION.tgz</span><br></pre></td></tr></table></figure>
+
+
+<blockquote>
+<p>在Windows上，用Git bash使用上面的脚本</p>
 </blockquote>
-<h3 id="关于爱好"><a href="#关于爱好" class="headerlink" title="关于爱好"></a>关于爱好</h3><p>热爱<code>运动</code>，热爱<code>游戏</code>，尤其喜爱<code>篮球</code>、<code>LOL</code>、<code>电影（Top250）</code>、<code>旅行</code>。</p>
-<h3 id="联系我"><a href="#联系我" class="headerlink" title="联系我"></a>联系我</h3><ul>
-<li>Home: <a href="https://Myangyang.github.io" target="_blank" rel="noopener">haoys.xyz</a></li>
-<li>Email: <a href="mailto:823825035@qq.com" target="_blank" rel="noopener">823825035@qq.com</a></li>
-<li>GitHub: <a href="https://github.com/Myangyang" target="_blank" rel="noopener">Myangyang</a></li>
-<li>WeiBo: <a href="http://weibo.com/p/1005053282424531/home?from=page_100505&mod=TAB&is_all=1" target="_blank" rel="noopener">Myangyang</a></li>
-</ul>
+<h1 id="4-支持环境"><a href="#4-支持环境" class="headerlink" title="4.支持环境"></a>4.支持环境</h1><p><strong>WebGL1.0设备（具备OES_texture_float 扩展）和WebGL2.0设备。对于那些没有WebGL的平台，提供了CPU回退机制。<br>然而，目前演示案例不支持手机、火狐以及Safari浏览器。请在PC端用谷歌浏览器进行浏览。</strong></p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年10月30日 10:58</p>
-        <p>原始链接： <a class="post-url" href="/about/index.html" title="关于">关于</a></p>
+        <p>最后更新： 2019年11月05日 16:05</p>
+        <p>原始链接： <a class="post-url" href="/2019/11/05/blog-010/" title="Deeplearn.js入门">Deeplearn.js入门</a></p>
         <p>极速通道： <a class="post-url" href=" http://myangyang.gitee.io" target="_blank" rel="noopener" title="极速通道国内服务器">国内服务器</a></p>
         <footer>
             <a href="http://cd7.yesapi.net">
@@ -212,7 +249,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://cd7.yesapi.net/about/&title=《关于》 — LEI&pic=http://cd7.yesapi.netimages/logo.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://cd7.yesapi.net/2019/11/05/blog-010/&title=《Deeplearn.js入门》 — LEI&pic=4E00296FDA19B48F1BABE2C4DD1249A3_20191031120724_bf325000a75b19b6f321920d36a289bd.jpeg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -222,22 +259,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://cd7.yesapi.net/about/&title=《关于》 — LEI&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://cd7.yesapi.net/2019/11/05/blog-010/&title=《Deeplearn.js入门》 — LEI&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://cd7.yesapi.net/about/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://cd7.yesapi.net/2019/11/05/blog-010/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《关于》 — LEI&url=http://cd7.yesapi.net/about/&via=http://cd7.yesapi.net" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Deeplearn.js入门》 — LEI&url=http://cd7.yesapi.net/2019/11/05/blog-010/&via=http://cd7.yesapi.net" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://cd7.yesapi.net/about/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://cd7.yesapi.net/2019/11/05/blog-010/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -247,7 +284,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://cd7.yesapi.net/about/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://cd7.yesapi.net/2019/11/05/blog-010/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -256,6 +293,17 @@
         <ul class="article-footer-menu">
             
             
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
+      
+    <a href="/tags/深度学习/" class="color5">深度学习</a>
+      
+    <a href="/tags/deeplearn.js/" class="color3">deeplearn.js</a>
+      
+  </li>
+
         </ul>
         
     </footer>
@@ -265,15 +313,27 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于我"><span class="post-toc-text">关于我</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于工作"><span class="post-toc-text">关于工作</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于学习"><span class="post-toc-text">关于学习</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于座右铭"><span class="post-toc-text">关于座右铭</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#关于爱好"><span class="post-toc-text">关于爱好</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#联系我"><span class="post-toc-text">联系我</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#1-简介"><span class="post-toc-text">1.简介</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2-用法"><span class="post-toc-text">2.用法</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#TypeScript-ES6-JavaScript"><span class="post-toc-text">TypeScript/ES6 JavaScript</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ES3-ES5-JavaScript"><span class="post-toc-text">ES3/ES5 JavaScript</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#3-构建"><span class="post-toc-text">3.构建</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#4-支持环境"><span class="post-toc-text">4.支持环境</span></a></li></ol>
         </nav>
     </aside>
     
 
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/05/blog-009/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">
+				开源 JavaScript 机器学习框架
+				<i class="fa fa-hand-o-right" aria-hidden="true"></i>
+			</span>
+    </a>
+  
+</nav>
+
 
 
     
-        <div id="SOHUCS" sid="" ></div>
+        <div id="SOHUCS" sid="blog-010" ></div>
 <script type="text/javascript">
     (function(){
         var appid = 'cyuvIqCTt';
