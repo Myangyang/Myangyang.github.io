@@ -107,14 +107,14 @@
       <div class="outer">
         <section id="main" class="body-wrap">
   
-    <article id="post-blog-002" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-blog-006" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/30/blog-002/"  >JS中call、apply、bind三者的作用和区别</a>
+      <a class="article-title" href="/2017/10/30/blog-006/"  >IE9(及以下)时间不兼容问题</a>
     </h1>
   
 
@@ -122,7 +122,7 @@
               <span class="header-cate">
                 <i class="fa fa-map-marker"></i>
                   
-                  <a href="/categories/JavaScript函数/">JavaScript函数</a>
+                  <a href="/categories/IE兼容性/">IE兼容性</a>
                   
               </span>
           
@@ -131,19 +131,28 @@
     <div class="article-entry " itemprop="articleBody">
       
         <div class="article-img">
-            <a href="/2019/10/30/blog-002/" >
+            <a href="/2017/10/30/blog-006/" >
                 
-                <img src="http://cd7.yesapi.net/4E00296FDA19B48F1BABE2C4DD1249A3_20191031120724_bf325000a75b19b6f321920d36a289bd.jpeg" alt="JS中call、apply、bind三者的作用和区别" title="JS中call、apply、bind三者的作用和区别">
+                <img src="http://cd7.yesapi.net/4E00296FDA19B48F1BABE2C4DD1249A3_20191031120719_6bb33da61c7bf51ce920a4d44cb68b12.png" alt="IE9(及以下)时间不兼容问题" title="IE9(及以下)时间不兼容问题">
                 
             </a>
         </div>
         <div class="article-feed">
             <p>
                 
-在刚接触javascript时，就碰到call(),apply(),bind()，我一直不是很明白。在工作中接触它们次数多了，对这三个方法也有了点理解，总的就是一句话：三者的作用都是改变函数的执行上下文。今天把它们简单阐述一下！
+在Javascript中时间转化场景广泛，但针对低版本浏览器还是有兼容性问题的，下面做一个简单的总结。
 
+一、 无参var dateTime = new Date();
+二、 有参构造函数
+日期构造函数 
 
-JavaScript权威指南上的解释是： call() 、apply()可以看作是某个对象的方法，通过调用方法的形式来间接调用函数。我理解它们的作用是：都能继...
+1、对于日期格式类型为：yyyy-mm-dd 
+
+对于此种格式 IE9 以上全部支持，IE9 以下不支持
+
+2、对于日期格式类型为：yyyy/mm/dd 
+
+对于此种格式 IE  Go...
             </p>
         </div>
       
@@ -153,25 +162,27 @@ JavaScript权威指南上的解释是： call() 、apply()可以看作是某个�
         
         <ul class="article-footer-menu">
             
-                <li><i class="fa fa-calendar"></i>2019-10-30</li>
+                <li><i class="fa fa-calendar"></i>2017-10-30</li>
             
             
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
+    <a href="/tags/前端/" class="color3">前端</a>
+      
     <a href="/tags/JavaScript/" class="color1">JavaScript</a>
       
-    <a href="/tags/apply/" class="color1">apply</a>
+    <a href="/tags/IE/" class="color3">IE</a>
       
-    <a href="/tags/call/" class="color5">call</a>
+    <a href="/tags/兼容性/" class="color4">兼容性</a>
       
-    <a href="/tags/bind/" class="color5">bind</a>
+    <a href="/tags/CSS/" class="color4">CSS</a>
       
   </li>
 
         </ul>
         
-            <a href="/2019/10/30/blog-002/#more" class="article-more-link" >详情 &gt;&gt;</a>
+            <a href="/2017/10/30/blog-006/#more" class="article-more-link" >详情 &gt;&gt;</a>
         
     </footer>
   </div>
@@ -186,7 +197,7 @@ JavaScript权威指南上的解释是： call() 、apply()可以看作是某个�
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/29/blog-001/"  >几款免费开放的接口API</a>
+      <a class="article-title" href="/2017/10/29/blog-001/"  >几款免费开放的接口API</a>
     </h1>
   
 
@@ -203,7 +214,7 @@ JavaScript权威指南上的解释是： call() 、apply()可以看作是某个�
     <div class="article-entry " itemprop="articleBody">
       
         <div class="article-img">
-            <a href="/2019/10/29/blog-001/" >
+            <a href="/2017/10/29/blog-001/" >
                 
                 <img src="http://cd7.yesapi.net/4E00296FDA19B48F1BABE2C4DD1249A3_20191031120705_ce62936b69732dc61b81cc3098c5a6ed.jpeg" alt="几款免费开放的接口API" title="几款免费开放的接口API">
                 
@@ -223,7 +234,7 @@ JavaScript权威指南上的解释是： call() 、apply()可以看作是某个�
         
         <ul class="article-footer-menu">
             
-                <li><i class="fa fa-calendar"></i>2019-10-29</li>
+                <li><i class="fa fa-calendar"></i>2017-10-29</li>
             
             
   <li class="article-footer-tags">
@@ -241,7 +252,7 @@ JavaScript权威指南上的解释是： call() 、apply()可以看作是某个�
 
         </ul>
         
-            <a href="/2019/10/29/blog-001/#more" class="article-more-link" >详情 &gt;&gt;</a>
+            <a href="/2017/10/29/blog-001/#more" class="article-more-link" >详情 &gt;&gt;</a>
         
     </footer>
   </div>
