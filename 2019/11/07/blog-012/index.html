@@ -17,7 +17,7 @@
 <meta property="og:description" content="探讨Img标签403 forbidden报错">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;15521290-3d9bd724c9f445c9.png">
-<meta property="og:updated_time" content="2019-11-07T09:08:33.968Z">
+<meta property="og:updated_time" content="2019-11-07T09:13:59.681Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;15521290-3d9bd724c9f445c9.png">
   
@@ -168,18 +168,14 @@
 </li>
 </ul>
 <p>当用户访问<code>IMDB</code> 页面的时候，<code>IMDB</code> 需要<code>Bandwidth</code> 传输数据，而<code>Bandwidth</code> 是网站的成本之一，好比谁也不愿意陌生人偷偷的把电器插到你的插座，偷偷的用你的电，而你去负担所有的费用。</p>
-<h1 id="三-解决"><a href="#三-解决" class="headerlink" title="三.解决"></a>三.解决</h1><p>针对<code>web</code> 开发人员有以下解决办法：</p>
-<ol>
-<li>将外网的<code>Image</code>在<code>Server</code>端下载 再转换成 <code>base64</code> 最后传输给<code>img 标签</code></li>
-</ol>
-<hr>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public static string ImageToBase64(Stream imageStream, ImageFormat format)</span><br><span class="line">        &#123;</span><br><span class="line">            using (System.Drawing.Image image = System.Drawing.Image.FromStream(imageStream))</span><br><span class="line">            &#123;</span><br><span class="line">                using (MemoryStream stream = new MemoryStream())</span><br><span class="line">                &#123;</span><br><span class="line">                    image.Save(stream, format);</span><br><span class="line"></span><br><span class="line">                    var result = System.Convert.ToBase64String(stream.ToArray());</span><br><span class="line">                    return result;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="三-解决"><a href="#三-解决" class="headerlink" title="三.解决"></a>三.解决</h1><p><strong>针对<code>web</code> 开发人员有以下解决办法：</strong></p>
+<h3 id="1-将外网的Image在Server端下载-再转换成-base64-最后传输给img-标签"><a href="#1-将外网的Image在Server端下载-再转换成-base64-最后传输给img-标签" class="headerlink" title="1. 将外网的Image在Server端下载 再转换成 base64 最后传输给img 标签"></a>1. 将外网的<code>Image</code>在<code>Server</code>端下载 再转换成 <code>base64</code> 最后传输给<code>img 标签</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public static string ImageToBase64(Stream imageStream, ImageFormat format)</span><br><span class="line">    &#123;</span><br><span class="line">        using (System.Drawing.Image image = System.Drawing.Image.FromStream(imageStream))</span><br><span class="line">        &#123;</span><br><span class="line">            using (MemoryStream stream = new MemoryStream())</span><br><span class="line">            &#123;</span><br><span class="line">                image.Save(stream, format);</span><br><span class="line"></span><br><span class="line">                var result = System.Convert.ToBase64String(stream.ToArray());</span><br><span class="line">                return result;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;data:image/png;base64,这里存放转换成base64的字符串 /&gt;</span><br></pre></td></tr></table></figure>
 
 
 
-<h2 id="2-利用RefererKiller这个JavaScript插件-绕过UrlReferer"><a href="#2-利用RefererKiller这个JavaScript插件-绕过UrlReferer" class="headerlink" title="2.利用RefererKiller这个JavaScript插件 绕过UrlReferer"></a>2.利用<a href="http://referrer-killer.googlecode.com/git/ReferrerKiller.js" target="_blank" rel="noopener">RefererKiller</a>这个JavaScript插件 绕过<code>UrlReferer</code></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">ReferrerKiller.imageHtml(&quot;fakeweb/fakeimage.png&quot;); 返回能够显示的 img 的 Html 字符串</span><br><span class="line"></span><br><span class="line">ReferrerKiller.imageHtml(&quot;fakeweb/fakeimage.png&quot;); 返回能够显示的 img 的 DOM 节点</span><br></pre></td></tr></table></figure>
+<h3 id="2-利用RefererKiller插件-绕过UrlReferer"><a href="#2-利用RefererKiller插件-绕过UrlReferer" class="headerlink" title="2.利用RefererKiller插件 绕过UrlReferer"></a>2.利用<a href="http://referrer-killer.googlecode.com/git/ReferrerKiller.js" target="_blank" rel="noopener">RefererKiller</a>插件 绕过<code>UrlReferer</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">ReferrerKiller.imageHtml(&quot;fakeweb/fakeimage.png&quot;); 返回能够显示的 img 的 Html 字符串</span><br><span class="line"></span><br><span class="line">ReferrerKiller.imageHtml(&quot;fakeweb/fakeimage.png&quot;); 返回能够显示的 img 的 DOM 节点</span><br></pre></td></tr></table></figure>
 
 <p>其实这两个函数是同一个东西，可以捡方便的用。</p>
 <p>这种方式解决<code>HotLinking</code> 问题其实原理很简单，在web中 比如:</p>
@@ -191,7 +187,7 @@
 <blockquote>
 <p>ReferrerKiller.imageHtml  返回的是一个能显示图片的<code>iframe</code></p>
 </blockquote>
-<h2 id="3-利用html中的meta标签关闭浏览器的UrlReferer"><a href="#3-利用html中的meta标签关闭浏览器的UrlReferer" class="headerlink" title="3.利用html中的meta标签关闭浏览器的UrlReferer"></a>3.利用<code>html</code>中的<code>meta</code>标签关闭浏览器的<code>UrlReferer</code></h2><p>直接添加<code>meta</code> 标签：</p>
+<h3 id="3-利用html中的meta标签关闭浏览器的UrlReferer"><a href="#3-利用html中的meta标签关闭浏览器的UrlReferer" class="headerlink" title="3.利用html中的meta标签关闭浏览器的UrlReferer"></a>3.利用<code>html</code>中的<code>meta</code>标签关闭浏览器的<code>UrlReferer</code></h3><p>直接添加<code>meta</code> 标签：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;</span><br></pre></td></tr></table></figure>
 
 <p><strong>此方法简单粗暴！</strong></p>
@@ -199,7 +195,7 @@
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年11月07日 17:08</p>
+        <p>最后更新： 2019年11月07日 17:13</p>
         <p>原始链接： <a class="post-url" href="/2019/11/07/blog-012/" title="探讨Img标签403 forbidden报错">探讨Img标签403 forbidden报错</a></p>
         <p>极速通道： <a class="post-url" href=" http://myangyang.gitee.io" target="_blank" rel="noopener" title="极速通道国内服务器">国内服务器</a></p>
         <footer>
@@ -322,7 +318,7 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-问题"><span class="post-toc-text">一.问题</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-原因"><span class="post-toc-text">二.原因</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三-解决"><span class="post-toc-text">三.解决</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-利用RefererKiller这个JavaScript插件-绕过UrlReferer"><span class="post-toc-text">2.利用RefererKiller这个JavaScript插件 绕过UrlReferer</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#3-利用html中的meta标签关闭浏览器的UrlReferer"><span class="post-toc-text">3.利用html中的meta标签关闭浏览器的UrlReferer</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-问题"><span class="post-toc-text">一.问题</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-原因"><span class="post-toc-text">二.原因</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三-解决"><span class="post-toc-text">三.解决</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-将外网的Image在Server端下载-再转换成-base64-最后传输给img-标签"><span class="post-toc-text">1. 将外网的Image在Server端下载 再转换成 base64 最后传输给img 标签</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-利用RefererKiller插件-绕过UrlReferer"><span class="post-toc-text">2.利用RefererKiller插件 绕过UrlReferer</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-利用html中的meta标签关闭浏览器的UrlReferer"><span class="post-toc-text">3.利用html中的meta标签关闭浏览器的UrlReferer</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
     
