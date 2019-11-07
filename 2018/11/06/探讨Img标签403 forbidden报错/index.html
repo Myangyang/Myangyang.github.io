@@ -3,21 +3,23 @@
 <head>
   <meta charset="utf-8">
   
-  <title>几款免费开放的接口API | LEI</title>
+  <title>探讨Img标签403 forbidden报错 | LEI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="LEI,LEI's Blog" />
   
-  <meta name="description" content="推荐给前端开发者的几款免费开放的接口API">
-<meta name="keywords" content="免费API,前端,接口,API">
+  <meta name="description" content="探讨Img标签403 forbidden报错">
+<meta name="keywords" content="HTML,IMG,403">
 <meta property="og:type" content="article">
-<meta property="og:title" content="几款免费开放的接口API">
-<meta property="og:url" content="http:&#x2F;&#x2F;cd7.yesapi.net&#x2F;2017&#x2F;10&#x2F;29&#x2F;blog-001&#x2F;index.html">
+<meta property="og:title" content="探讨Img标签403 forbidden报错">
+<meta property="og:url" content="http:&#x2F;&#x2F;cd7.yesapi.net&#x2F;2018&#x2F;11&#x2F;06&#x2F;%E6%8E%A2%E8%AE%A8Img%E6%A0%87%E7%AD%BE403%20forbidden%E6%8A%A5%E9%94%99&#x2F;index.html">
 <meta property="og:site_name" content="LEI">
-<meta property="og:description" content="推荐给前端开发者的几款免费开放的接口API">
+<meta property="og:description" content="探讨Img标签403 forbidden报错">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-07T09:48:48.896Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;15521290-3d9bd724c9f445c9.png">
+<meta property="og:updated_time" content="2019-11-07T09:47:12.835Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;15521290-3d9bd724c9f445c9.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -109,14 +111,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-blog-001" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-探讨Img标签403 forbidden报错" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      几款免费开放的接口API
+      探讨Img标签403 forbidden报错
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -124,12 +126,12 @@
               <li>
                   <i class="fa fa-book"></i>
                   
-                      <a href="/categories/接口API/">接口API</a>
+                      <a href="/categories/HTML/">HTML</a>
                   
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2017-10-29
+          <i class="fa fa-calendar"></i>  2018-11-06
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -145,42 +147,56 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <blockquote>
-<p>前端开发者经常面对五花八门的技术，通常为了更好的适应潮流需要学习和实战。但是实战演练过程中往往因为没有后端开发配合，演练总会有不足之处…那就是接口，接口，接口！下面为大家推荐几个开放的API接口地址</p>
+            <h1 id="一-问题"><a href="#一-问题" class="headerlink" title="一.问题"></a>一.问题</h1><blockquote>
+<p>网页中经常需要显示图片给用户看，对网站本身来说有的图片是从本地图片服务器来的，但是一旦数量多了以后，磁盘空间又是一个问题。</p>
 </blockquote>
-<a id="more"></a>
+<blockquote>
+<p>有时就希望显示其他网站的<code>Image</code>，直接把其他网站的图片显示在我的网站上。但并不是所有的外网<code>Image</code> 都能直接连接过来显示。</p>
+</blockquote>
+<p>但是很多情况下网站开发人员就会遇到 <strong>403 forbidden</strong> 的问题。比如想显示来自<code>简书</code>的一张图片</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;https://upload-images.jianshu.io/upload_images/15521290-b56cd3b1bc721cf9.png&quot;&gt;</span><br></pre></td></tr></table></figure>
 
-<h3 id="小白接口"><a href="#小白接口" class="headerlink" title="小白接口"></a>小白接口</h3><p>小白接口特点：</p>
-<ol>
-<li>接口全面，速度快</li>
-<li>能自己建模，调用属于自己的接口</li>
-<li>官方人员在线给予技术支持，响应速度超快</li>
-<li>免费 免费 免费！</li>
-</ol>
-<p>非常适合前端开发学习使用！强烈推荐！强烈推荐！强烈推荐！</p>
+<p>本地localhost Debug的时候完全可以显示，但是将网站部署到服务器后就会遇到这样的错误</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/15521290-3d9bd724c9f445c9.png" alt="403.png"></p>
+<h1 id="二-原因"><a href="#二-原因" class="headerlink" title="二.原因"></a>二.原因</h1><blockquote>
+<p><strong>为什么网站要做 Anti HotLinking反盗链的事情呢</strong></p>
+</blockquote>
 <ul>
-<li>小白地址 <a href="http://open.yesapi.cn/?r=user/registration&amp;from=January" target="_blank" rel="noopener">http://open.yesapi.cn/?r=user/registration&amp;from=January</a></li>
-<li>技术QQ群： 660311764</li>
+<li><p>版权的问题</p>
+</li>
+<li><p>Bandwidth Theft</p>
+</li>
 </ul>
-<h3 id="API工厂"><a href="#API工厂" class="headerlink" title="API工厂"></a>API工厂</h3><p>API工厂特点就是接口全面，速度也不错<br>唯一缺点就是：有些功能必须花钱<br>总体来说值得推荐</p>
-<ul>
-<li>接口文档地址：<a href="https://api.it120.cc/doc.html" target="_blank" rel="noopener">https://api.it120.cc/doc.html</a></li>
-<li>后台管理地址：<a href="https://admin.it120.cc/" target="_blank" rel="noopener">https://admin.it120.cc/</a></li>
-</ul>
-<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>还有一些开发接口，不过因为各种原因用起来比较麻烦</p>
-<ul>
-<li>apiopen ：<a href="https://www.apiopen.top" target="_blank" rel="noopener">https://www.apiopen.top</a> </li>
-<li>豆瓣API 貌似挂啦 看着篇就够了：<a href="https://blog.csdn.net/qq_31754523/article/details/94665791" target="_blank" rel="noopener">https://blog.csdn.net/qq_31754523/article/details/94665791</a></li>
-</ul>
-<h3 id="Mock-js"><a href="#Mock-js" class="headerlink" title="Mock.js"></a>Mock.js</h3><p>会用mockjs搞数据的就用mock吧，各有利弊，看个人习惯</p>
-<ul>
-<li>Mock.js: <a href="http://mockjs.com/" target="_blank" rel="noopener">http://mockjs.com/</a></li>
-</ul>
+<p>当用户访问<code>IMDB</code> 页面的时候，<code>IMDB</code> 需要<code>Bandwidth</code> 传输数据，而<code>Bandwidth</code> 是网站的成本之一，好比谁也不愿意陌生人偷偷的把电器插到你的插座，偷偷的用你的电，而你去负担所有的费用。</p>
+<h1 id="三-解决"><a href="#三-解决" class="headerlink" title="三.解决"></a>三.解决</h1><p><strong>针对<code>web</code> 开发人员有以下解决办法：</strong></p>
+<h3 id="1-将外网的Image在Server端下载-再转换成-base64-最后传输给img-标签"><a href="#1-将外网的Image在Server端下载-再转换成-base64-最后传输给img-标签" class="headerlink" title="1. 将外网的Image在Server端下载 再转换成 base64 最后传输给img 标签"></a>1. 将外网的<code>Image</code>在<code>Server</code>端下载 再转换成 <code>base64</code> 最后传输给<code>img 标签</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">public static string ImageToBase64(Stream imageStream, ImageFormat format)</span><br><span class="line">    &#123;</span><br><span class="line">        using (System.Drawing.Image image = System.Drawing.Image.FromStream(imageStream))</span><br><span class="line">        &#123;</span><br><span class="line">            using (MemoryStream stream = new MemoryStream())</span><br><span class="line">            &#123;</span><br><span class="line">                image.Save(stream, format);</span><br><span class="line"></span><br><span class="line">                var result = System.Convert.ToBase64String(stream.ToArray());</span><br><span class="line">                return result;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;data:image/png;base64,这里存放转换成base64的字符串 /&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="2-利用RefererKiller插件-绕过UrlReferer"><a href="#2-利用RefererKiller插件-绕过UrlReferer" class="headerlink" title="2.利用RefererKiller插件 绕过UrlReferer"></a>2.利用<a href="http://referrer-killer.googlecode.com/git/ReferrerKiller.js" target="_blank" rel="noopener">RefererKiller</a>插件 绕过<code>UrlReferer</code></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">ReferrerKiller.imageHtml(&quot;fakeweb/fakeimage.png&quot;); 返回能够显示的 img 的 Html 字符串</span><br><span class="line"></span><br><span class="line">ReferrerKiller.imageHtml(&quot;fakeweb/fakeimage.png&quot;); 返回能够显示的 img 的 DOM 节点</span><br></pre></td></tr></table></figure>
+
+<p>其实这两个函数是同一个东西，可以捡方便的用。</p>
+<p>这种方式解决<code>HotLinking</code> 问题其实原理很简单，在web中 比如:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=&quot;differentDomain/fake.js&quot;&gt; &lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+<p><code>script</code> <strong>标签是没有跨域访问的问题</strong></p>
+<p><code>ReferrerKiller</code> 原理是动态生成一个<code>iframe</code>，并加入<code>img</code> 标签。利用 src 加载的特性把代码放到<code>src</code> 中，就可以去掉 <code>Referer</code>，所以：</p>
+<blockquote>
+<p>ReferrerKiller.imageHtml  返回的是一个能显示图片的<code>iframe</code></p>
+</blockquote>
+<h3 id="3-利用html中的meta标签关闭浏览器的UrlReferer"><a href="#3-利用html中的meta标签关闭浏览器的UrlReferer" class="headerlink" title="3.利用html中的meta标签关闭浏览器的UrlReferer"></a>3.利用<code>html</code>中的<code>meta</code>标签关闭浏览器的<code>UrlReferer</code></h3><p>直接添加<code>meta</code> 标签：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot; /&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>此方法简单粗暴！</strong></p>
+<p>部分内容摘自： <a href="https://www.cnblogs.com/GmrBrian/p/6212255.html" target="_blank" rel="noopener">关于img 403 forbidden的一些思考</a></p>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年11月07日 17:48</p>
-        <p>原始链接： <a class="post-url" href="/2017/10/29/blog-001/" title="几款免费开放的接口API">几款免费开放的接口API</a></p>
+        <p>最后更新： 2019年11月07日 17:47</p>
+        <p>原始链接： <a class="post-url" href="/2018/11/06/%E6%8E%A2%E8%AE%A8Img%E6%A0%87%E7%AD%BE403%20forbidden%E6%8A%A5%E9%94%99/" title="探讨Img标签403 forbidden报错">探讨Img标签403 forbidden报错</a></p>
         <p>极速通道： <a class="post-url" href=" http://myangyang.gitee.io" target="_blank" rel="noopener" title="极速通道国内服务器">国内服务器</a></p>
         <footer>
             <a href="http://cd7.yesapi.net">
@@ -238,7 +254,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://cd7.yesapi.net/2017/10/29/blog-001/&title=《几款免费开放的接口API》 — LEI&pic=4E00296FDA19B48F1BABE2C4DD1249A3_20191031120705_ce62936b69732dc61b81cc3098c5a6ed.jpeg" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://cd7.yesapi.net/2018/11/06/%E6%8E%A2%E8%AE%A8Img%E6%A0%87%E7%AD%BE403%20forbidden%E6%8A%A5%E9%94%99/&title=《探讨Img标签403 forbidden报错》 — LEI&pic=4E00296FDA19B48F1BABE2C4DD1249A3_20191107163406_115b56242aa7e0fbd2d7ab703c78c120.jpeg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -248,23 +264,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://cd7.yesapi.net/2017/10/29/blog-001/&title=《几款免费开放的接口API》 — LEI&source=
-前端开发者经常面对五花八门的技术，通常为了更好的适应潮流需要学习和实战。但是实战演练过程中往往因为没有后端开发配合，演练总会有不足之处…那就是接口，接口..." data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://cd7.yesapi.net/2018/11/06/%E6%8E%A2%E8%AE%A8Img%E6%A0%87%E7%AD%BE403%20forbidden%E6%8A%A5%E9%94%99/&title=《探讨Img标签403 forbidden报错》 — LEI&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://cd7.yesapi.net/2017/10/29/blog-001/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://cd7.yesapi.net/2018/11/06/%E6%8E%A2%E8%AE%A8Img%E6%A0%87%E7%AD%BE403%20forbidden%E6%8A%A5%E9%94%99/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《几款免费开放的接口API》 — LEI&url=http://cd7.yesapi.net/2017/10/29/blog-001/&via=http://cd7.yesapi.net" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《探讨Img标签403 forbidden报错》 — LEI&url=http://cd7.yesapi.net/2018/11/06/%E6%8E%A2%E8%AE%A8Img%E6%A0%87%E7%AD%BE403%20forbidden%E6%8A%A5%E9%94%99/&via=http://cd7.yesapi.net" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://cd7.yesapi.net/2017/10/29/blog-001/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://cd7.yesapi.net/2018/11/06/%E6%8E%A2%E8%AE%A8Img%E6%A0%87%E7%AD%BE403%20forbidden%E6%8A%A5%E9%94%99/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -274,7 +289,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://cd7.yesapi.net/2017/10/29/blog-001/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://cd7.yesapi.net/2018/11/06/%E6%8E%A2%E8%AE%A8Img%E6%A0%87%E7%AD%BE403%20forbidden%E6%8A%A5%E9%94%99/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -286,13 +301,11 @@
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/免费API/" class="color1">免费API</a>
+    <a href="/tags/HTML/" class="color5">HTML</a>
       
-    <a href="/tags/前端/" class="color3">前端</a>
+    <a href="/tags/IMG/" class="color4">IMG</a>
       
-    <a href="/tags/接口/" class="color3">接口</a>
-      
-    <a href="/tags/API/" class="color4">API</a>
+    <a href="/tags/403/" class="color4">403</a>
       
   </li>
 
@@ -305,30 +318,37 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#小白接口"><span class="post-toc-text">小白接口</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#API工厂"><span class="post-toc-text">API工厂</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#其他"><span class="post-toc-text">其他</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Mock-js"><span class="post-toc-text">Mock.js</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#一-问题"><span class="post-toc-text">一.问题</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#二-原因"><span class="post-toc-text">二.原因</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#三-解决"><span class="post-toc-text">三.解决</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-将外网的Image在Server端下载-再转换成-base64-最后传输给img-标签"><span class="post-toc-text">1. 将外网的Image在Server端下载 再转换成 base64 最后传输给img 标签</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#2-利用RefererKiller插件-绕过UrlReferer"><span class="post-toc-text">2.利用RefererKiller插件 绕过UrlReferer</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-利用html中的meta标签关闭浏览器的UrlReferer"><span class="post-toc-text">3.利用html中的meta标签关闭浏览器的UrlReferer</span></a></li></ol></li></ol></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2017/10/30/blog-006/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/11/07/AntDesgnPro4.0%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          IE9(及以下)时间不兼容问题
+          Ant desgn Pro4.0 配置环境变量
         
       </span>
     </a>
   
+  
+    <a href="/2017/10/30/IE9(%E5%8F%8A%E4%BB%A5%E4%B8%8B)%E6%97%B6%E9%97%B4%E4%B8%8D%E5%85%BC%E5%AE%B9%E9%97%AE%E9%A2%98/" id="article-nav-older" class="article-nav-link-wrap">
+      <span class="article-nav-title">
+				IE9(及以下)时间不兼容问题
+				<i class="fa fa-hand-o-right" aria-hidden="true"></i>
+			</span>
+    </a>
   
 </nav>
 
 
 
     
-        <div id="SOHUCS" sid="blog-001" ></div>
+        <div id="SOHUCS" sid="探讨Img标签403 forbidden报错" ></div>
 <script type="text/javascript">
     (function(){
         var appid = 'cyuvIqCTt';

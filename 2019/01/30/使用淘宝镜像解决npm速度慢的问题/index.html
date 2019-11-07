@@ -3,25 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Ant desgn Pro4.0 配置环境变量 | LEI</title>
+  <title>使用淘宝镜像解决npm速度慢的问题 | LEI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="LEI,LEI's Blog" />
   
-  <meta name="description" content="Ant desgn Pro4.0 配置环境变量">
-<meta name="keywords" content="webpack,Ant desgn,react">
+  <meta name="description" content="使用淘宝镜像解决npm速度慢的问题">
+<meta name="keywords" content="JavaScript,前端,npm,nodeJS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ant desgn Pro4.0 配置环境变量">
-<meta property="og:url" content="http:&#x2F;&#x2F;cd7.yesapi.net&#x2F;2018&#x2F;11&#x2F;07&#x2F;blog-011&#x2F;index.html">
+<meta property="og:title" content="使用淘宝镜像解决npm速度慢的问题">
+<meta property="og:url" content="http:&#x2F;&#x2F;cd7.yesapi.net&#x2F;2019&#x2F;01&#x2F;30&#x2F;%E4%BD%BF%E7%94%A8%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F%E8%A7%A3%E5%86%B3npm%E9%80%9F%E5%BA%A6%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98&#x2F;index.html">
 <meta property="og:site_name" content="LEI">
-<meta property="og:description" content="Ant desgn Pro4.0 配置环境变量">
+<meta property="og:description" content="使用淘宝镜像解决npm速度慢的问题">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;15521290-b56cd3b1bc721cf9.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;15521290-765cf36e9e315066.png">
-<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;15521290-373182ddc8d465c8.png">
-<meta property="og:updated_time" content="2019-11-07T09:46:33.472Z">
+<meta property="og:updated_time" content="2019-11-07T09:47:49.274Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;15521290-b56cd3b1bc721cf9.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -113,14 +109,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-blog-011" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-使用淘宝镜像解决npm速度慢的问题" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      Ant desgn Pro4.0 配置环境变量
+      使用淘宝镜像解决npm速度慢的问题
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -128,12 +124,12 @@
               <li>
                   <i class="fa fa-book"></i>
                   
-                      <a href="/categories/webpack/">webpack</a>
+                      <a href="/categories/npm/">npm</a>
                   
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2018-11-07
+          <i class="fa fa-calendar"></i>  2019-01-30
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -150,23 +146,27 @@
       
             
             <blockquote>
-<p>不少小伙伴工作中用的 react + ant 来开发。最新的后台管理模板更新到 Ant desgn Pro4.0，由于高度封装了，很多<code>webpack</code> 配置都傻瓜式了…最近遇到一个问题，一个前端在开发环境中需要对接5个<code>Java</code> 开发，这时候就出现问题了，对接不同人时的ip不同，难道每次修改配置文件连接？答案肯定不是，下边教你运用环境变量来解决这个多<code>ip地址</code> 问题</p>
+<p>首先，淘宝镜像地址： <a href="http://npm.taobao.org/" target="_blank" rel="noopener">http://npm.taobao.org/</a></p>
 </blockquote>
-<h1 id="1-安装-cross-env"><a href="#1-安装-cross-env" class="headerlink" title="1.安装 cross-env"></a>1.安装 cross-env</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install cross-env --save-dev</span><br><span class="line">或者</span><br><span class="line">yarn add cross-env --dev</span><br></pre></td></tr></table></figure>
-
-<p>对于 <code>npm</code> 和 <code>yarn</code> 的介绍请移步  <a href="/2019/10/30/blog-008/">Npm vs Yarn</a></p>
-<h1 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2.配置环境变量"></a>2.配置环境变量</h1><pre><code>了解`node`的都知道，`node`默认有开发环境`development`和生产环境`production`两个变量，这里不过多讲述。回到问题来，在开发环境 NODE_ENV 默认是`development`，按照这个思路，我们加一个自己的变量比如：`API_ENV` 来定义不同`ip` 下的接口`url`。下边一步一步来配置：</code></pre><h3 id="1-config-js"><a href="#1-config-js" class="headerlink" title="1. config.js"></a>1. config.js</h3><p><img src="https://upload-images.jianshu.io/upload_images/15521290-b56cd3b1bc721cf9.png" alt="config.js"></p>
-<h3 id="配置package-json"><a href="#配置package-json" class="headerlink" title=".配置package.json"></a>.配置package.json</h3><p><img src="https://upload-images.jianshu.io/upload_images/15521290-765cf36e9e315066.png" alt="package.json"></p>
-<h3 id="3-request-js"><a href="#3-request-js" class="headerlink" title="3.request.js"></a>3.request.js</h3><p><img src="https://upload-images.jianshu.io/upload_images/15521290-373182ddc8d465c8.png" alt="request.js"></p>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><blockquote>
-<p>以上是针对开发过程遇到具体问题的解决办法，因为限于时间和个人水平，实现方法可能很low，也希望有好的建议请分享出来供大家学习</p>
+<h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h3><p>有很多方法来配置npm的registry地址，下面根据不同情景列出几种比较常用的方法。</p>
+<p><strong>淘宝镜像举例：</strong></p>
+<p>1.临时使用</p>
+<blockquote>
+<p>npm –registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a> install express</p>
 </blockquote>
-<p><strong>大牛有好的建议请留言，先感谢您的建议！</strong></p>
+<p>2.一直使用</p>
+<blockquote>
+<p>npm config set registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br>验证是否成功：npm config get registry 或 npm info express</p>
+</blockquote>
+<p>3.使用cnpm</p>
+<blockquote>
+<p>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a><br>或<br>cnpm install express</p>
+</blockquote>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年11月07日 17:46</p>
-        <p>原始链接： <a class="post-url" href="/2018/11/07/blog-011/" title="Ant desgn Pro4.0 配置环境变量">Ant desgn Pro4.0 配置环境变量</a></p>
+        <p>最后更新： 2019年11月07日 17:47</p>
+        <p>原始链接： <a class="post-url" href="/2019/01/30/%E4%BD%BF%E7%94%A8%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F%E8%A7%A3%E5%86%B3npm%E9%80%9F%E5%BA%A6%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/" title="使用淘宝镜像解决npm速度慢的问题">使用淘宝镜像解决npm速度慢的问题</a></p>
         <p>极速通道： <a class="post-url" href=" http://myangyang.gitee.io" target="_blank" rel="noopener" title="极速通道国内服务器">国内服务器</a></p>
         <footer>
             <a href="http://cd7.yesapi.net">
@@ -224,7 +224,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://cd7.yesapi.net/2018/11/07/blog-011/&title=《Ant desgn Pro4.0 配置环境变量》 — LEI&pic=4E00296FDA19B48F1BABE2C4DD1249A3_20191031120738_f00c95540c1f7f7d439bb607cc92388a.jpeg" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://cd7.yesapi.net/2019/01/30/%E4%BD%BF%E7%94%A8%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F%E8%A7%A3%E5%86%B3npm%E9%80%9F%E5%BA%A6%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/&title=《使用淘宝镜像解决npm速度慢的问题》 — LEI&pic=4E00296FDA19B48F1BABE2C4DD1249A3_20191031120734_7f39b23fe1a1b3a8de8258b1fa160ce9.jpeg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -234,22 +234,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://cd7.yesapi.net/2018/11/07/blog-011/&title=《Ant desgn Pro4.0 配置环境变量》 — LEI&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://cd7.yesapi.net/2019/01/30/%E4%BD%BF%E7%94%A8%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F%E8%A7%A3%E5%86%B3npm%E9%80%9F%E5%BA%A6%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/&title=《使用淘宝镜像解决npm速度慢的问题》 — LEI&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://cd7.yesapi.net/2018/11/07/blog-011/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://cd7.yesapi.net/2019/01/30/%E4%BD%BF%E7%94%A8%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F%E8%A7%A3%E5%86%B3npm%E9%80%9F%E5%BA%A6%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Ant desgn Pro4.0 配置环境变量》 — LEI&url=http://cd7.yesapi.net/2018/11/07/blog-011/&via=http://cd7.yesapi.net" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《使用淘宝镜像解决npm速度慢的问题》 — LEI&url=http://cd7.yesapi.net/2019/01/30/%E4%BD%BF%E7%94%A8%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F%E8%A7%A3%E5%86%B3npm%E9%80%9F%E5%BA%A6%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/&via=http://cd7.yesapi.net" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://cd7.yesapi.net/2018/11/07/blog-011/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://cd7.yesapi.net/2019/01/30/%E4%BD%BF%E7%94%A8%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F%E8%A7%A3%E5%86%B3npm%E9%80%9F%E5%BA%A6%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -259,7 +259,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://cd7.yesapi.net/2018/11/07/blog-011/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://cd7.yesapi.net/2019/01/30/%E4%BD%BF%E7%94%A8%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F%E8%A7%A3%E5%86%B3npm%E9%80%9F%E5%BA%A6%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -271,11 +271,13 @@
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/webpack/" class="color3">webpack</a>
+    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
       
-    <a href="/tags/Antdesgn/" class="color5">Ant desgn</a>
+    <a href="/tags/前端/" class="color3">前端</a>
       
-    <a href="/tags/react/" class="color1">react</a>
+    <a href="/tags/npm/" class="color4">npm</a>
+      
+    <a href="/tags/nodeJS/" class="color2">nodeJS</a>
       
   </li>
 
@@ -288,27 +290,27 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#1-安装-cross-env"><span class="post-toc-text">1.安装 cross-env</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2-配置环境变量"><span class="post-toc-text">2.配置环境变量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-config-js"><span class="post-toc-text">1. config.js</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置package-json"><span class="post-toc-text">.配置package.json</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-request-js"><span class="post-toc-text">3.request.js</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#结语"><span class="post-toc-text">结语</span></a></li></ol></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#如何使用"><span class="post-toc-text">如何使用</span></a></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2019/01/05/blog-009/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/01/30/Npm&&Yarn/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          开源 JavaScript 机器学习框架
+          Npm vs Yarn
         
       </span>
     </a>
   
   
-    <a href="/2018/11/06/blog-012/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/01/13/%E5%B0%86%E4%B8%80%E4%B8%AAJS%E6%95%B0%E7%BB%84%E4%B9%B1%E5%BA%8F%E8%BE%93%E5%87%BA/" id="article-nav-older" class="article-nav-link-wrap">
       <span class="article-nav-title">
-				探讨Img标签403 forbidden报错
+				将一个JS数组乱序输出
 				<i class="fa fa-hand-o-right" aria-hidden="true"></i>
 			</span>
     </a>
@@ -318,7 +320,7 @@
 
 
     
-        <div id="SOHUCS" sid="blog-011" ></div>
+        <div id="SOHUCS" sid="使用淘宝镜像解决npm速度慢的问题" ></div>
 <script type="text/javascript">
     (function(){
         var appid = 'cyuvIqCTt';

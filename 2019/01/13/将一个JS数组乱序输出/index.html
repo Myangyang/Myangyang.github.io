@@ -3,26 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>开源 JavaScript 机器学习框架 | LEI</title>
+  <title>将一个JS数组乱序输出 | LEI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="LEI,LEI's Blog" />
   
-  <meta name="description" content="JavaScript 机器学习框架">
-<meta name="keywords" content="JavaScript,深度学习,机器学习">
+  <meta name="description" content="JavaScript中将一个数组乱序输出">
+<meta name="keywords" content="JavaScript,前端,数组,Array">
 <meta property="og:type" content="article">
-<meta property="og:title" content="开源 JavaScript 机器学习框架">
-<meta property="og:url" content="http:&#x2F;&#x2F;cd7.yesapi.net&#x2F;2019&#x2F;01&#x2F;05&#x2F;blog-009&#x2F;index.html">
+<meta property="og:title" content="将一个JS数组乱序输出">
+<meta property="og:url" content="http:&#x2F;&#x2F;cd7.yesapi.net&#x2F;2019&#x2F;01&#x2F;13&#x2F;%E5%B0%86%E4%B8%80%E4%B8%AAJS%E6%95%B0%E7%BB%84%E4%B9%B1%E5%BA%8F%E8%BE%93%E5%87%BA&#x2F;index.html">
 <meta property="og:site_name" content="LEI">
-<meta property="og:description" content="JavaScript 机器学习框架">
+<meta property="og:description" content="JavaScript中将一个数组乱序输出">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="https:&#x2F;&#x2F;ss1.baidu.com&#x2F;6ONXsjip0QIZ8tyhnq&#x2F;it&#x2F;u=94337059,492320070&amp;fm=173&amp;app=25&amp;f=JPEG?w=451&amp;h=335&amp;s=48C3BB4653F7826D04F1F0190300B0C1">
-<meta property="og:image" content="https:&#x2F;&#x2F;ss1.baidu.com&#x2F;6ONXsjip0QIZ8tyhnq&#x2F;it&#x2F;u=1439866861,2423464099&amp;fm=173&amp;app=25&amp;f=JPEG?w=451&amp;h=231&amp;s=2C22743214CCDB0D2C65D2E50200A0A5">
-<meta property="og:image" content="https:&#x2F;&#x2F;ss1.baidu.com&#x2F;6ONXsjip0QIZ8tyhnq&#x2F;it&#x2F;u=2617665352,3963181391&amp;fm=173&amp;app=25&amp;f=JPEG?w=361&amp;h=451&amp;s=CD00FC134931528023EDCCDB0300F032">
-<meta property="og:image" content="https:&#x2F;&#x2F;ss2.baidu.com&#x2F;6ONYsjip0QIZ8tyhnq&#x2F;it&#x2F;u=4071805202,302381045&amp;fm=173&amp;app=25&amp;f=JPEG?w=451&amp;h=94&amp;s=2542BB4AEFA4B7705478FC030100E0C3">
-<meta property="og:updated_time" content="2019-11-07T09:47:30.421Z">
+<meta property="og:updated_time" content="2019-11-07T09:48:32.703Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;ss1.baidu.com&#x2F;6ONXsjip0QIZ8tyhnq&#x2F;it&#x2F;u=94337059,492320070&amp;fm=173&amp;app=25&amp;f=JPEG?w=451&amp;h=335&amp;s=48C3BB4653F7826D04F1F0190300B0C1">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -114,14 +109,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-blog-009" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-将一个JS数组乱序输出" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      开源 JavaScript 机器学习框架
+      将一个JS数组乱序输出
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -129,12 +124,12 @@
               <li>
                   <i class="fa fa-book"></i>
                   
-                      <a href="/categories/JS机器学习框架/">JS机器学习框架</a>
+                      <a href="/categories/JavaScript数组/">JavaScript数组</a>
                   
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2019-01-05
+          <i class="fa fa-calendar"></i>  2019-01-13
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -150,81 +145,19 @@
     <div class="article-entry post-content" itemprop="articleBody">
       
             
-            <p>大多数玩机器学习的同事在工作中都是用 <code>Python</code> 这样的语言完成的，但既然身处在 <code>JavaScript</code> 这个生态中，为什么不试试一起使用 <code>JavaScript</code> 玩 机器学习 呢？而且使用 <code>JavaScript</code> 还允许运行在浏览器和服务器端、甚至是桌面程序上。通过做一些Search和研究发现，这里的确有一些简洁的库，可以将 <code>JavaScript</code>、机器学习、<code>DNN</code> 甚至 <code>NLP</code> 结合在一起，而且在浏览器端大多库会调用 WebGL 来做机器学习的计算。下面是一些机器学习算法，基于这些算法可以使用本文中列出的不同<code>JavaScript</code> 框架来模型训练：</p>
-<ul>
-<li><p>简单的线性回归</p>
-</li>
-<li><p>多变量线性回归</p>
-</li>
-<li><p>逻辑回归</p>
-</li>
-<li><p>朴素贝叶斯</p>
-</li>
-<li><p>k最近邻算法（KNN）</p>
-</li>
-<li><p>K-means</p>
-</li>
-<li><p>支持向量机（SVM）</p>
-</li>
-<li><p>随机森林</p>
-</li>
-<li><p>决策树</p>
-</li>
-<li><p>前馈神经网络</p>
-</li>
-<li><p>深度学习网络</p>
-</li>
-</ul>
-<h1 id="1-DeepLearn-js"><a href="#1-DeepLearn-js" class="headerlink" title="1.DeepLearn.js"></a>1.<a href="https://ai.google/research/teams/brain/pair" target="_blank" rel="noopener">DeepLearn.js</a></h1><p>Deeplearn.js是Google发布的一个开源的机器学习<code>JavaScript</code> 库，可用于不同的目的，例如在浏览器中训练神经网络，理解ML模型，用于教育目的等。你可以在推理模式中运行预先训练的模型。可以在<code>Typescript</code>（ES6 <code>JavaScript</code> ）或ES5 <code>JavaScript</code> 中编写代码。通过在HTML文件的head标签中包含以下代码并编写用于构建模型的JS程序，可以实现快速入门。</p>
-<p><strong>友链：<a href="/2019/11/05/blog-010/">Deeplearn入门</a></strong></p>
-<h1 id="2-TensorFlow-js"><a href="#2-TensorFlow-js" class="headerlink" title="2.TensorFlow.js"></a>2.<a href="https://js.tensorflow.org/" target="_blank" rel="noopener">TensorFlow.js</a></h1><p>TensorFlow.js 是一个开源的基于硬件加速的 <code>JavaScript</code> 的库，支持在浏览器或者 <code>NodeJs</code> 中来运行深度学习，并且能支持现有的 Tensorflow 模型，由Google出品。可以说是前端深度学习框架 Deeplearn.js 的继任者。它提供一系列简洁和通俗易懂的 API，用于训练、部署模型。而且因为可以运行在浏览器，所以可以直接通过 URL 就能分享你的程序</p>
-<p><img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=94337059,492320070&fm=173&app=25&f=JPEG?w=451&h=335&s=48C3BB4653F7826D04F1F0190300B0C1" alt="吃豆人" title="吃豆人"></p>
-<p>通过摄像头来控制的吃豆人游戏。</p>
-<h1 id="3-Brain-js"><a href="#3-Brain-js" class="headerlink" title="3.Brain.js"></a>3.<a href="https://brain.js.org/" target="_blank" rel="noopener">Brain.js</a></h1><p>Brain.js 是同样可以运行在浏览器和 <code>NodeJs</code> 服务器端、能为不同的任务提供不同类型的训练网络。特点是让定义、训练以及执行神经网络变得特别简单。个人觉得这个库比较适合入门。比如以下短短几行代码已涵盖创建、训练和执行神经网络，一目了然：</p>
-<p><img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=1439866861,2423464099&fm=173&app=25&f=JPEG?w=451&h=231&s=2C22743214CCDB0D2C65D2E50200A0A5" alt="色彩识别" title="色彩识别"></p>
-<h1 id="4-Synaptic-js"><a href="#4-Synaptic-js" class="headerlink" title="4.Synaptic.js"></a>4.<a href="http://caza.la/synaptic" target="_blank" rel="noopener">Synaptic.js</a></h1><p>Synaptic 可以运行在浏览器和 <code>NodeJs</code> 服务器端的神经网络库，你能够用它训练一层甚至是二层神经网络结构。该库包括一些内置的体系结构，如多层感知机<code>MLP</code>、长短时记忆网络、液体状态机和能够训练真实网络的训练器。</p>
-<p><img src="https://ss1.baidu.com/6ONXsjip0QIZ8tyhnq/it/u=2617665352,3963181391&fm=173&app=25&f=JPEG?w=361&h=451&s=CD00FC134931528023EDCCDB0300F032" alt="image-filter" title="image-filter"></p>
-<h1 id="5-Machine-learning-ml-js"><a href="#5-Machine-learning-ml-js" class="headerlink" title="5.Machine learning (ml.js)"></a>5.<a href="https://github.com/mljs/ml" target="_blank" rel="noopener">Machine learning (ml.js)</a></h1><p>Machine Learning tools 是由 <code>mljs</code> 组织开发的一组库，可以为 <code>JavaScript</code> 提供机器学习工具，类似于 <code>Python</code> 中的 <code>scikit-learn</code>，支持以下机器学习算法：</p>
-<ul>
-<li><p>无监督学习</p>
-</li>
-<li><p>主成分分析（PCA）</p>
-</li>
-<li><p>K均值聚类</p>
-</li>
-<li><p>监督学习</p>
-</li>
-<li><p>简单线性回归</p>
-</li>
-<li><p>多变量线性回归</p>
-</li>
-<li><p>支持向量机（SVM）</p>
-</li>
-<li><p>朴素贝叶斯</p>
-</li>
-<li><p>K最近邻算法（KNN）</p>
-</li>
-<li><p>偏最小二乘算法（PLS）</p>
-</li>
-<li><p>决策树：CART</p>
-</li>
-<li><p>随机森林</p>
-</li>
-<li><p>逻辑回归</p>
-</li>
-<li><p>人工神经网络</p>
-</li>
-<li><p>前馈神经网络</p>
-</li>
-</ul>
-<h1 id="6-compromise"><a href="#6-compromise" class="headerlink" title="6.compromise"></a>6.<a href="http://compromise.cool/" target="_blank" rel="noopener">compromise</a></h1><p>基本上是<code>NLP</code>自然语言处理库 - 前端 <code>JavaScript</code> 实现的首选，这个库加上自己的资料库压缩成min.js后文件大小可达到300k以下，这样运行在浏览器和 <code>NodeJs</code> 服务器端都问题不大，具体可以做的东西是训练自定义语义库：划分出分词，获取句子的各个词性，可以把句子变积极消极、分词等，比如以下例子：</p>
-<p><img src="https://ss2.baidu.com/6ONYsjip0QIZ8tyhnq/it/u=4071805202,302381045&fm=173&app=25&f=JPEG?w=451&h=94&s=2542BB4AEFA4B7705478FC030100E0C3" alt="compromise" title="compromise"></p>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p><strong><code>JavaScript</code> 虽然不是机器学习的最佳编程语言，不过随着 Web生态 和人工智能技术近年来的不断发展完善，越来越多这样的机器学习工具库被研发和发布。对于一名Web的前端开发者而言，用 <code>JavaScript</code> 作为入门机器学习的桥梁是个不错的选择，它同样能帮助你开启机器学习之旅。</strong></p>
+            <blockquote>
+<p>在Javascript可能有这样的需求：将一个数组乱序输出，推荐两种方法。</p>
+</blockquote>
+<p>1、splice()方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function shuffle(a) &#123;</span><br><span class="line">    var arr = [];</span><br><span class="line">    while (a.length &gt; 0) &#123;</span><br><span class="line">        var i= parseInt(Math.random() * (a.length - 1));</span><br><span class="line">        arr.push(a[i]);</span><br><span class="line">        a.splice(i, 1);</span><br><span class="line">    &#125;</span><br><span class="line">    return arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2、洗牌法 效率高</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function shuffle(a) &#123;</span><br><span class="line">     var len = a.length;</span><br><span class="line">    for (var i = 0; i &lt; len - 1; i++) &#123;</span><br><span class="line">        var index = parseInt(Math.random() * (len - i));</span><br><span class="line">        var temp = a[index];</span><br><span class="line">        a[index] = a[len - i - 1];</span><br><span class="line">        a[len - i - 1] = temp;</span><br><span class="line">    &#125;</span><br><span class="line">    return a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年11月07日 17:47</p>
-        <p>原始链接： <a class="post-url" href="/2019/01/05/blog-009/" title="开源 JavaScript 机器学习框架">开源 JavaScript 机器学习框架</a></p>
+        <p>最后更新： 2019年11月07日 17:48</p>
+        <p>原始链接： <a class="post-url" href="/2019/01/13/%E5%B0%86%E4%B8%80%E4%B8%AAJS%E6%95%B0%E7%BB%84%E4%B9%B1%E5%BA%8F%E8%BE%93%E5%87%BA/" title="将一个JS数组乱序输出">将一个JS数组乱序输出</a></p>
         <p>极速通道： <a class="post-url" href=" http://myangyang.gitee.io" target="_blank" rel="noopener" title="极速通道国内服务器">国内服务器</a></p>
         <footer>
             <a href="http://cd7.yesapi.net">
@@ -282,7 +215,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://cd7.yesapi.net/2019/01/05/blog-009/&title=《开源 JavaScript 机器学习框架》 — LEI&pic=4E00296FDA19B48F1BABE2C4DD1249A3_20191031120726_cc4c963346ecd2eb44b49d7c7310978b.jpeg" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://cd7.yesapi.net/2019/01/13/%E5%B0%86%E4%B8%80%E4%B8%AAJS%E6%95%B0%E7%BB%84%E4%B9%B1%E5%BA%8F%E8%BE%93%E5%87%BA/&title=《将一个JS数组乱序输出》 — LEI&pic=4E00296FDA19B48F1BABE2C4DD1249A3_20191031120726_cc4c963346ecd2eb44b49d7c7310978b.jpeg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -292,22 +225,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://cd7.yesapi.net/2019/01/05/blog-009/&title=《开源 JavaScript 机器学习框架》 — LEI&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://cd7.yesapi.net/2019/01/13/%E5%B0%86%E4%B8%80%E4%B8%AAJS%E6%95%B0%E7%BB%84%E4%B9%B1%E5%BA%8F%E8%BE%93%E5%87%BA/&title=《将一个JS数组乱序输出》 — LEI&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://cd7.yesapi.net/2019/01/05/blog-009/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://cd7.yesapi.net/2019/01/13/%E5%B0%86%E4%B8%80%E4%B8%AAJS%E6%95%B0%E7%BB%84%E4%B9%B1%E5%BA%8F%E8%BE%93%E5%87%BA/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《开源 JavaScript 机器学习框架》 — LEI&url=http://cd7.yesapi.net/2019/01/05/blog-009/&via=http://cd7.yesapi.net" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《将一个JS数组乱序输出》 — LEI&url=http://cd7.yesapi.net/2019/01/13/%E5%B0%86%E4%B8%80%E4%B8%AAJS%E6%95%B0%E7%BB%84%E4%B9%B1%E5%BA%8F%E8%BE%93%E5%87%BA/&via=http://cd7.yesapi.net" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://cd7.yesapi.net/2019/01/05/blog-009/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://cd7.yesapi.net/2019/01/13/%E5%B0%86%E4%B8%80%E4%B8%AAJS%E6%95%B0%E7%BB%84%E4%B9%B1%E5%BA%8F%E8%BE%93%E5%87%BA/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -317,7 +250,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://cd7.yesapi.net/2019/01/05/blog-009/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://cd7.yesapi.net/2019/01/13/%E5%B0%86%E4%B8%80%E4%B8%AAJS%E6%95%B0%E7%BB%84%E4%B9%B1%E5%BA%8F%E8%BE%93%E5%87%BA/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -331,9 +264,11 @@
       
     <a href="/tags/JavaScript/" class="color1">JavaScript</a>
       
-    <a href="/tags/深度学习/" class="color5">深度学习</a>
+    <a href="/tags/前端/" class="color3">前端</a>
       
-    <a href="/tags/机器学习/" class="color5">机器学习</a>
+    <a href="/tags/数组/" class="color3">数组</a>
+      
+    <a href="/tags/Array/" class="color1">Array</a>
       
   </li>
 
@@ -344,29 +279,23 @@
 </article>
 
 
-    <aside class="post-toc-pos post-toc-top" id="post-toc">
-        <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#1-DeepLearn-js"><span class="post-toc-text">1.DeepLearn.js</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2-TensorFlow-js"><span class="post-toc-text">2.TensorFlow.js</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#3-Brain-js"><span class="post-toc-text">3.Brain.js</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#4-Synaptic-js"><span class="post-toc-text">4.Synaptic.js</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#5-Machine-learning-ml-js"><span class="post-toc-text">5.Machine learning (ml.js)</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#6-compromise"><span class="post-toc-text">6.compromise</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#结语"><span class="post-toc-text">结语</span></a></li></ol>
-        </nav>
-    </aside>
-    
 
 <nav id="article-nav">
   
-    <a href="/2019/01/05/blog-010/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/01/30/%E4%BD%BF%E7%94%A8%E6%B7%98%E5%AE%9D%E9%95%9C%E5%83%8F%E8%A7%A3%E5%86%B3npm%E9%80%9F%E5%BA%A6%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          Deeplearn.js入门
+          使用淘宝镜像解决npm速度慢的问题
         
       </span>
     </a>
   
   
-    <a href="/2018/11/07/blog-011/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2019/01/13/JavaScript%E5%87%BD%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
       <span class="article-nav-title">
-				Ant desgn Pro4.0 配置环境变量
+				JS中call、apply、bind三者的作用和区别
 				<i class="fa fa-hand-o-right" aria-hidden="true"></i>
 			</span>
     </a>
@@ -376,7 +305,7 @@
 
 
     
-        <div id="SOHUCS" sid="blog-009" ></div>
+        <div id="SOHUCS" sid="将一个JS数组乱序输出" ></div>
 <script type="text/javascript">
     (function(){
         var appid = 'cyuvIqCTt';

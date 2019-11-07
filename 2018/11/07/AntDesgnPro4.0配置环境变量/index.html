@@ -3,21 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>IE9(及以下)时间不兼容问题 | LEI</title>
+  <title>Ant desgn Pro4.0 配置环境变量 | LEI</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
     <meta name="keywords" content="LEI,LEI's Blog" />
   
-  <meta name="description" content="IE9(及以下)时间不兼容问题">
-<meta name="keywords" content="前端,JavaScript,IE,兼容性,CSS">
+  <meta name="description" content="Ant desgn Pro4.0 配置环境变量">
+<meta name="keywords" content="webpack,Ant desgn,react">
 <meta property="og:type" content="article">
-<meta property="og:title" content="IE9(及以下)时间不兼容问题">
-<meta property="og:url" content="http:&#x2F;&#x2F;cd7.yesapi.net&#x2F;2017&#x2F;10&#x2F;30&#x2F;blog-006&#x2F;index.html">
+<meta property="og:title" content="Ant desgn Pro4.0 配置环境变量">
+<meta property="og:url" content="http:&#x2F;&#x2F;cd7.yesapi.net&#x2F;2018&#x2F;11&#x2F;07&#x2F;AntDesgnPro4.0%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F&#x2F;index.html">
 <meta property="og:site_name" content="LEI">
-<meta property="og:description" content="IE9(及以下)时间不兼容问题">
+<meta property="og:description" content="Ant desgn Pro4.0 配置环境变量">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-07T09:47:58.641Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;15521290-b56cd3b1bc721cf9.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;15521290-765cf36e9e315066.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;15521290-373182ddc8d465c8.png">
+<meta property="og:updated_time" content="2019-11-07T09:46:33.472Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;upload-images.jianshu.io&#x2F;upload_images&#x2F;15521290-b56cd3b1bc721cf9.png">
   
   
     <link rel="icon" href="/favicon.ico">
@@ -109,14 +113,14 @@
     </div>
 </header>
       <div class="outer">
-        <section id="main" class="body-wrap"><article id="post-blog-006" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main" class="body-wrap"><article id="post-AntDesgnPro4.0配置环境变量" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="post-title" itemprop="name">
-      IE9(及以下)时间不兼容问题
+      Ant desgn Pro4.0 配置环境变量
     </h1>
     <div class="post-title-bar">
       <ul>
@@ -124,12 +128,12 @@
               <li>
                   <i class="fa fa-book"></i>
                   
-                      <a href="/categories/IE兼容性/">IE兼容性</a>
+                      <a href="/categories/webpack/">webpack</a>
                   
               </li>
           
         <li>
-          <i class="fa fa-calendar"></i>  2017-10-30
+          <i class="fa fa-calendar"></i>  2018-11-07
         </li>
         <li>
           <i class="fa fa-eye"></i>
@@ -146,41 +150,23 @@
       
             
             <blockquote>
-<p>在Javascript中时间转化场景广泛，但针对低版本浏览器还是有兼容性问题的，下面做一个简单的总结。</p>
+<p>不少小伙伴工作中用的 react + ant 来开发。最新的后台管理模板更新到 Ant desgn Pro4.0，由于高度封装了，很多<code>webpack</code> 配置都傻瓜式了…最近遇到一个问题，一个前端在开发环境中需要对接5个<code>Java</code> 开发，这时候就出现问题了，对接不同人时的ip不同，难道每次修改配置文件连接？答案肯定不是，下边教你运用环境变量来解决这个多<code>ip地址</code> 问题</p>
 </blockquote>
-<h3 id="一、-无参"><a href="#一、-无参" class="headerlink" title="一、 无参"></a>一、 无参</h3><p>var dateTime = new Date();</p>
-<h3 id="二、-有参构造函数"><a href="#二、-有参构造函数" class="headerlink" title="二、 有参构造函数"></a>二、 有参构造函数</h3><ul>
-<li><strong>日期构造函数</strong> </li>
-</ul>
-<p>1、对于日期格式类型为：yyyy-mm-dd </p>
-<blockquote>
-<p>对于此种格式 IE9 以上全部支持，IE9 以下不支持</p>
+<h1 id="1-安装-cross-env"><a href="#1-安装-cross-env" class="headerlink" title="1.安装 cross-env"></a>1.安装 cross-env</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install cross-env --save-dev</span><br><span class="line">或者</span><br><span class="line">yarn add cross-env --dev</span><br></pre></td></tr></table></figure>
+
+<p>对于 <code>npm</code> 和 <code>yarn</code> 的介绍请移步  <a href="/2019/10/30/blog-008/">Npm vs Yarn</a></p>
+<h1 id="2-配置环境变量"><a href="#2-配置环境变量" class="headerlink" title="2.配置环境变量"></a>2.配置环境变量</h1><pre><code>了解`node`的都知道，`node`默认有开发环境`development`和生产环境`production`两个变量，这里不过多讲述。回到问题来，在开发环境 NODE_ENV 默认是`development`，按照这个思路，我们加一个自己的变量比如：`API_ENV` 来定义不同`ip` 下的接口`url`。下边一步一步来配置：</code></pre><h3 id="1-config-js"><a href="#1-config-js" class="headerlink" title="1. config.js"></a>1. config.js</h3><p><img src="https://upload-images.jianshu.io/upload_images/15521290-b56cd3b1bc721cf9.png" alt="config.js"></p>
+<h3 id="配置package-json"><a href="#配置package-json" class="headerlink" title=".配置package.json"></a>.配置package.json</h3><p><img src="https://upload-images.jianshu.io/upload_images/15521290-765cf36e9e315066.png" alt="package.json"></p>
+<h3 id="3-request-js"><a href="#3-request-js" class="headerlink" title="3.request.js"></a>3.request.js</h3><p><img src="https://upload-images.jianshu.io/upload_images/15521290-373182ddc8d465c8.png" alt="request.js"></p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><blockquote>
+<p>以上是针对开发过程遇到具体问题的解决办法，因为限于时间和个人水平，实现方法可能很low，也希望有好的建议请分享出来供大家学习</p>
 </blockquote>
-<p>2、对于日期格式类型为：yyyy/mm/dd </p>
-<blockquote>
-<p>对于此种格式 IE  Google  Firefox 全部支持</p>
-</blockquote>
-<ul>
-<li><strong>日期时间构造函数</strong></li>
-</ul>
-<p>1、对于日期时间格式类型为：yyyy-MM-dd hh:mm:ss </p>
-<blockquote>
-<p>对于此种格式 IE 不兼容，new Date(yyyy-MM-dd hh:mm:ss) IE 报非法 date 类型</p>
-</blockquote>
-<p>2、对于日期时间格式类型为: yyyy/MM/dd hh:mm:ss</p>
-<blockquote>
-<p>对于此种格式 IE  Google Firefox 都支持</p>
-</blockquote>
-<p>3、对于日期时间格式类型为：yyyy-MM-ddThh:mm:ss </p>
-<blockquote>
-<p>对于此种格式 IE9 只能获取到日期，时间可能是错误的</p>
-</blockquote>
-<p>所以在JavaScript中，对于时间格式化最好使用 <strong>yyyy/MM/dd hh:mm:ss</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function format(value) &#123; </span><br><span class="line">    if (value) &#123; </span><br><span class="line">        value = val.replace(/-/g,&apos;/&apos;); </span><br><span class="line">        var time = new Date(value); </span><br><span class="line">        return time.dateFormat(&apos;Y-m-d hh:mm&apos;)</span><br><span class="line">    &#125; else &#123; </span><br><span class="line">      return &apos;&apos;;</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>大牛有好的建议请留言，先感谢您的建议！</strong></p>
+
             <div class="post-copyright">
     <div class="content">
-        <p>最后更新： 2019年11月07日 17:47</p>
-        <p>原始链接： <a class="post-url" href="/2017/10/30/blog-006/" title="IE9(及以下)时间不兼容问题">IE9(及以下)时间不兼容问题</a></p>
+        <p>最后更新： 2019年11月07日 17:46</p>
+        <p>原始链接： <a class="post-url" href="/2018/11/07/AntDesgnPro4.0%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" title="Ant desgn Pro4.0 配置环境变量">Ant desgn Pro4.0 配置环境变量</a></p>
         <p>极速通道： <a class="post-url" href=" http://myangyang.gitee.io" target="_blank" rel="noopener" title="极速通道国内服务器">国内服务器</a></p>
         <footer>
             <a href="http://cd7.yesapi.net">
@@ -238,7 +224,7 @@
     <div class="post-share-list" id="share-list">
         <ul class="share-icons">
           <li>
-            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://cd7.yesapi.net/2017/10/30/blog-006/&title=《IE9(及以下)时间不兼容问题》 — LEI&pic=4E00296FDA19B48F1BABE2C4DD1249A3_20191031120719_6bb33da61c7bf51ce920a4d44cb68b12.png" data-title="微博">
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://cd7.yesapi.net/2018/11/07/AntDesgnPro4.0%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/&title=《Ant desgn Pro4.0 配置环境变量》 — LEI&pic=4E00296FDA19B48F1BABE2C4DD1249A3_20191031120738_f00c95540c1f7f7d439bb607cc92388a.jpeg" data-title="微博">
               <i class="fa fa-weibo"></i>
             </a>
           </li>
@@ -248,22 +234,22 @@
             </a>
           </li>
           <li>
-            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://cd7.yesapi.net/2017/10/30/blog-006/&title=《IE9(及以下)时间不兼容问题》 — LEI&source=" data-title="QQ">
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://cd7.yesapi.net/2018/11/07/AntDesgnPro4.0%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/&title=《Ant desgn Pro4.0 配置环境变量》 — LEI&source=" data-title="QQ">
               <i class="fa fa-qq"></i>
             </a>
           </li>
           <li>
-            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://cd7.yesapi.net/2017/10/30/blog-006/" data-title="Facebook">
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://cd7.yesapi.net/2018/11/07/AntDesgnPro4.0%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" data-title="Facebook">
               <i class="fa fa-facebook"></i>
             </a>
           </li>
           <li>
-            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《IE9(及以下)时间不兼容问题》 — LEI&url=http://cd7.yesapi.net/2017/10/30/blog-006/&via=http://cd7.yesapi.net" data-title="Twitter">
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Ant desgn Pro4.0 配置环境变量》 — LEI&url=http://cd7.yesapi.net/2018/11/07/AntDesgnPro4.0%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/&via=http://cd7.yesapi.net" data-title="Twitter">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
           <li>
-            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://cd7.yesapi.net/2017/10/30/blog-006/" data-title="Google+">
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://cd7.yesapi.net/2018/11/07/AntDesgnPro4.0%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" data-title="Google+">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -273,7 +259,7 @@
 <div class="post-modal wx-share" id="wxShare">
     <a class="close" href="javascript:;" id="wxShare-close">×</a>
     <p>扫一扫，分享到微信</p>
-    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://cd7.yesapi.net/2017/10/30/blog-006/" alt="微信分享二维码">
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=http://cd7.yesapi.net/2018/11/07/AntDesgnPro4.0%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" alt="微信分享二维码">
 </div>
 
 <div class="mask"></div>
@@ -285,15 +271,11 @@
   <li class="article-footer-tags">
     <i class="fa fa-tags"></i>
       
-    <a href="/tags/前端/" class="color3">前端</a>
+    <a href="/tags/webpack/" class="color3">webpack</a>
       
-    <a href="/tags/JavaScript/" class="color1">JavaScript</a>
+    <a href="/tags/Antdesgn/" class="color5">Ant desgn</a>
       
-    <a href="/tags/IE/" class="color3">IE</a>
-      
-    <a href="/tags/兼容性/" class="color4">兼容性</a>
-      
-    <a href="/tags/CSS/" class="color4">CSS</a>
+    <a href="/tags/react/" class="color1">react</a>
       
   </li>
 
@@ -306,27 +288,27 @@
 
     <aside class="post-toc-pos post-toc-top" id="post-toc">
         <nav class="post-toc-wrap">
-            <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#一、-无参"><span class="post-toc-text">一、 无参</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二、-有参构造函数"><span class="post-toc-text">二、 有参构造函数</span></a></li></ol>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#1-安装-cross-env"><span class="post-toc-text">1.安装 cross-env</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2-配置环境变量"><span class="post-toc-text">2.配置环境变量</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#1-config-js"><span class="post-toc-text">1. config.js</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#配置package-json"><span class="post-toc-text">.配置package.json</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#3-request-js"><span class="post-toc-text">3.request.js</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#结语"><span class="post-toc-text">结语</span></a></li></ol></li></ol>
         </nav>
     </aside>
     
 
 <nav id="article-nav">
   
-    <a href="/2018/11/06/blog-012/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/01/05/JavaScript%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6/" id="article-nav-newer" class="article-nav-link-wrap">
 
       <span class="article-nav-title">
         <i class="fa fa-hand-o-left" aria-hidden="true"></i>
         
-          探讨Img标签403 forbidden报错
+          开源 JavaScript 机器学习框架
         
       </span>
     </a>
   
   
-    <a href="/2017/10/29/blog-001/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/11/06/%E6%8E%A2%E8%AE%A8Img%E6%A0%87%E7%AD%BE403%20forbidden%E6%8A%A5%E9%94%99/" id="article-nav-older" class="article-nav-link-wrap">
       <span class="article-nav-title">
-				几款免费开放的接口API
+				探讨Img标签403 forbidden报错
 				<i class="fa fa-hand-o-right" aria-hidden="true"></i>
 			</span>
     </a>
@@ -336,7 +318,7 @@
 
 
     
-        <div id="SOHUCS" sid="blog-006" ></div>
+        <div id="SOHUCS" sid="AntDesgnPro4.0配置环境变量" ></div>
 <script type="text/javascript">
     (function(){
         var appid = 'cyuvIqCTt';
