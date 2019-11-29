@@ -680,6 +680,91 @@ JavaScript权威指南上的解释是： call() 、apply()可以看作是某个�
 
 
   
+    <article id="post-利用a标签携带token实现下载并完美兼容IE" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/29/%E5%88%A9%E7%94%A8a%E6%A0%87%E7%AD%BE%E6%90%BA%E5%B8%A6token%E5%AE%9E%E7%8E%B0%E4%B8%8B%E8%BD%BD%E5%B9%B6%E5%AE%8C%E7%BE%8E%E5%85%BC%E5%AE%B9IE/"  >利用a标签携带token实现下载并完美兼容IE</a>
+    </h1>
+  
+
+          
+              <span class="header-cate">
+                <i class="fa fa-map-marker"></i>
+                  
+                  <a href="/categories/a标签/">a标签</a>
+                  
+              </span>
+          
+      </header>
+    
+    <div class="article-entry " itemprop="articleBody">
+      
+        <div class="article-img">
+            <a href="/2018/11/29/%E5%88%A9%E7%94%A8a%E6%A0%87%E7%AD%BE%E6%90%BA%E5%B8%A6token%E5%AE%9E%E7%8E%B0%E4%B8%8B%E8%BD%BD%E5%B9%B6%E5%AE%8C%E7%BE%8E%E5%85%BC%E5%AE%B9IE/" >
+                
+                <img src="http://cd7.yesapi.net/4E00296FDA19B48F1BABE2C4DD1249A3_20191107163406_115b56242aa7e0fbd2d7ab703c78c120.jpeg" alt="利用a标签携带token实现下载并完美兼容IE" title="利用a标签携带token实现下载并完美兼容IE">
+                
+            </a>
+        </div>
+        <div class="article-feed">
+            <p>
+                
+作为一名前端开发者，我们经常遇到下载文件的场景（包括：图片，文档，压缩包等），解决办法五花八门，而且使用场景过于单一…
+
+常规方法常规方法我们会用a标签或者form表单来实现下载功能。
+
+a 标签
+
+a标签的用法都很熟悉，但是却有两个致命缺点：
+
+不能携带鉴权信息 token
+
+兼容性问题
+
+
+
+只有 火狐和谷歌浏览器支持！！！
+
+form 表单
+
+form 表单用法很早就有，但是有个明显...
+            </p>
+        </div>
+      
+        
+    </div>
+    <footer class="article-footer">
+        
+        <ul class="article-footer-menu">
+            
+                <li><i class="fa fa-calendar"></i>2018-11-29</li>
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/前端/" class="color3">前端</a>
+      
+    <a href="/tags/兼容性/" class="color4">兼容性</a>
+      
+    <a href="/tags/a标签/" class="color4">a标签</a>
+      
+  </li>
+
+        </ul>
+        
+            <a href="/2018/11/29/%E5%88%A9%E7%94%A8a%E6%A0%87%E7%AD%BE%E6%90%BA%E5%B8%A6token%E5%AE%9E%E7%8E%B0%E4%B8%8B%E8%BD%BD%E5%B9%B6%E5%AE%8C%E7%BE%8E%E5%85%BC%E5%AE%B9IE/#more" class="article-more-link" >详情 &gt;&gt;</a>
+        
+    </footer>
+  </div>
+</article>
+
+
+  
     <article id="post-AntDesgnPro4.0配置环境变量" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -749,79 +834,6 @@ JavaScript权威指南上的解释是： call() 、apply()可以看作是某个�
 
 
   
-    <article id="post-探讨Img标签403 forbidden报错" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/06/%E6%8E%A2%E8%AE%A8Img%E6%A0%87%E7%AD%BE403%20forbidden%E6%8A%A5%E9%94%99/"  >探讨Img标签403 forbidden报错</a>
-    </h1>
-  
-
-          
-              <span class="header-cate">
-                <i class="fa fa-map-marker"></i>
-                  
-                  <a href="/categories/HTML/">HTML</a>
-                  
-              </span>
-          
-      </header>
-    
-    <div class="article-entry " itemprop="articleBody">
-      
-        <div class="article-img">
-            <a href="/2018/11/06/%E6%8E%A2%E8%AE%A8Img%E6%A0%87%E7%AD%BE403%20forbidden%E6%8A%A5%E9%94%99/" >
-                
-                <img src="http://cd7.yesapi.net/4E00296FDA19B48F1BABE2C4DD1249A3_20191107163406_115b56242aa7e0fbd2d7ab703c78c120.jpeg" alt="探讨Img标签403 forbidden报错" title="探讨Img标签403 forbidden报错">
-                
-            </a>
-        </div>
-        <div class="article-feed">
-            <p>
-                一.问题
-网页中经常需要显示图片给用户看，对网站本身来说有的图片是从本地图片服务器来的，但是一旦数量多了以后，磁盘空间又是一个问题。
-
-
-有时就希望显示其他网站的Image，直接把其他网站的图片显示在我的网站上。但并不是所有的外网Image 都能直接连接过来显示。
-
-但是很多情况下网站开发人员就会遇到 403 forbidden 的问题。比如想显示来自简书的一张图片
-1&lt;img src...
-            </p>
-        </div>
-      
-        
-    </div>
-    <footer class="article-footer">
-        
-        <ul class="article-footer-menu">
-            
-                <li><i class="fa fa-calendar"></i>2018-11-06</li>
-            
-            
-  <li class="article-footer-tags">
-    <i class="fa fa-tags"></i>
-      
-    <a href="/tags/HTML/" class="color5">HTML</a>
-      
-    <a href="/tags/IMG/" class="color4">IMG</a>
-      
-    <a href="/tags/403/" class="color4">403</a>
-      
-  </li>
-
-        </ul>
-        
-            <a href="/2018/11/06/%E6%8E%A2%E8%AE%A8Img%E6%A0%87%E7%AD%BE403%20forbidden%E6%8A%A5%E9%94%99/#more" class="article-more-link" >详情 &gt;&gt;</a>
-        
-    </footer>
-  </div>
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -878,10 +890,10 @@ JavaScript权威指南上的解释是： call() 、apply()可以看作是某个�
 <div class="sidebar-menu-box" id="sidebar-menu-box">
     <div class="sidebar-menu-box-container">
         <div id="sidebar-menu-box-categories">
-            <a class="category-link" href="/categories/Deeplearn/">Deeplearn</a><a class="category-link" href="/categories/HTML/">HTML</a><a class="category-link" href="/categories/IE%E5%85%BC%E5%AE%B9%E6%80%A7/">IE兼容性</a><a class="category-link" href="/categories/JS%E5%AF%B9%E8%B1%A1/">JS对象</a><a class="category-link" href="/categories/JS%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6/">JS机器学习框架</a><a class="category-link" href="/categories/JavaScript%E5%87%BD%E6%95%B0/">JavaScript函数</a><a class="category-link" href="/categories/JavaScript%E6%95%B0%E7%BB%84/">JavaScript数组</a><a class="category-link" href="/categories/npm/">npm</a><a class="category-link" href="/categories/npm-yarn/">npm-yarn</a><a class="category-link" href="/categories/webpack/">webpack</a><a class="category-link" href="/categories/%E6%8E%A5%E5%8F%A3API/">接口API</a>
+            <a class="category-link" href="/categories/Deeplearn/">Deeplearn</a><a class="category-link" href="/categories/HTML/">HTML</a><a class="category-link" href="/categories/IE%E5%85%BC%E5%AE%B9%E6%80%A7/">IE兼容性</a><a class="category-link" href="/categories/JS%E5%AF%B9%E8%B1%A1/">JS对象</a><a class="category-link" href="/categories/JS%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%A1%86%E6%9E%B6/">JS机器学习框架</a><a class="category-link" href="/categories/JavaScript%E5%87%BD%E6%95%B0/">JavaScript函数</a><a class="category-link" href="/categories/JavaScript%E6%95%B0%E7%BB%84/">JavaScript数组</a><a class="category-link" href="/categories/a%E6%A0%87%E7%AD%BE/">a标签</a><a class="category-link" href="/categories/npm/">npm</a><a class="category-link" href="/categories/npm-yarn/">npm-yarn</a><a class="category-link" href="/categories/webpack/">webpack</a><a class="category-link" href="/categories/%E6%8E%A5%E5%8F%A3API/">接口API</a>
         </div>
         <div id="sidebar-menu-box-tags">
-            <a href="/tags/403/" style="font-size: 10px;">403</a> <a href="/tags/API/" style="font-size: 10px;">API</a> <a href="/tags/Ant-desgn/" style="font-size: 10px;">Ant desgn</a> <a href="/tags/Array/" style="font-size: 10px;">Array</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/IE/" style="font-size: 10px;">IE</a> <a href="/tags/IMG/" style="font-size: 10px;">IMG</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/apply/" style="font-size: 10px;">apply</a> <a href="/tags/bind/" style="font-size: 10px;">bind</a> <a href="/tags/call/" style="font-size: 10px;">call</a> <a href="/tags/deeplearn-js/" style="font-size: 10px;">deeplearn.js</a> <a href="/tags/nodeJS/" style="font-size: 13.33px;">nodeJS</a> <a href="/tags/npm/" style="font-size: 13.33px;">npm</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/webpack/" style="font-size: 13.33px;">webpack</a> <a href="/tags/yarn/" style="font-size: 10px;">yarn</a> <a href="/tags/%E5%85%8D%E8%B4%B9API/" style="font-size: 10px;">免费API</a> <a href="/tags/%E5%85%BC%E5%AE%B9%E6%80%A7/" style="font-size: 10px;">兼容性</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 16.67px;">前端</a> <a href="/tags/%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">对象</a> <a href="/tags/%E6%8E%A5%E5%8F%A3/" style="font-size: 10px;">接口</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 10px;">数组</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">机器学习</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 13.33px;">深度学习</a>
+            <a href="/tags/403/" style="font-size: 10px;">403</a> <a href="/tags/API/" style="font-size: 10px;">API</a> <a href="/tags/Ant-desgn/" style="font-size: 10px;">Ant desgn</a> <a href="/tags/Array/" style="font-size: 10px;">Array</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/IE/" style="font-size: 10px;">IE</a> <a href="/tags/IMG/" style="font-size: 10px;">IMG</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/apply/" style="font-size: 10px;">apply</a> <a href="/tags/a%E6%A0%87%E7%AD%BE/" style="font-size: 10px;">a标签</a> <a href="/tags/bind/" style="font-size: 10px;">bind</a> <a href="/tags/call/" style="font-size: 10px;">call</a> <a href="/tags/deeplearn-js/" style="font-size: 10px;">deeplearn.js</a> <a href="/tags/nodeJS/" style="font-size: 15px;">nodeJS</a> <a href="/tags/npm/" style="font-size: 15px;">npm</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/webpack/" style="font-size: 15px;">webpack</a> <a href="/tags/yarn/" style="font-size: 10px;">yarn</a> <a href="/tags/%E5%85%8D%E8%B4%B9API/" style="font-size: 10px;">免费API</a> <a href="/tags/%E5%85%BC%E5%AE%B9%E6%80%A7/" style="font-size: 15px;">兼容性</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 20px;">前端</a> <a href="/tags/%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">对象</a> <a href="/tags/%E6%8E%A5%E5%8F%A3/" style="font-size: 10px;">接口</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 10px;">数组</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">机器学习</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 15px;">深度学习</a>
         </div>
     </div>
     <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
@@ -914,7 +926,7 @@ JavaScript权威指南上的解释是： call() 、apply()可以看作是某个�
     <div class="mobile-header-tag-container">
         <span class="title">标签</span>
         <div id="mobile-header-container-tags">
-            <a href="/tags/403/" style="font-size: 10px;">403</a> <a href="/tags/API/" style="font-size: 10px;">API</a> <a href="/tags/Ant-desgn/" style="font-size: 10px;">Ant desgn</a> <a href="/tags/Array/" style="font-size: 10px;">Array</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/IE/" style="font-size: 10px;">IE</a> <a href="/tags/IMG/" style="font-size: 10px;">IMG</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/apply/" style="font-size: 10px;">apply</a> <a href="/tags/bind/" style="font-size: 10px;">bind</a> <a href="/tags/call/" style="font-size: 10px;">call</a> <a href="/tags/deeplearn-js/" style="font-size: 10px;">deeplearn.js</a> <a href="/tags/nodeJS/" style="font-size: 13.33px;">nodeJS</a> <a href="/tags/npm/" style="font-size: 13.33px;">npm</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/webpack/" style="font-size: 13.33px;">webpack</a> <a href="/tags/yarn/" style="font-size: 10px;">yarn</a> <a href="/tags/%E5%85%8D%E8%B4%B9API/" style="font-size: 10px;">免费API</a> <a href="/tags/%E5%85%BC%E5%AE%B9%E6%80%A7/" style="font-size: 10px;">兼容性</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 16.67px;">前端</a> <a href="/tags/%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">对象</a> <a href="/tags/%E6%8E%A5%E5%8F%A3/" style="font-size: 10px;">接口</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 10px;">数组</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">机器学习</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 13.33px;">深度学习</a>
+            <a href="/tags/403/" style="font-size: 10px;">403</a> <a href="/tags/API/" style="font-size: 10px;">API</a> <a href="/tags/Ant-desgn/" style="font-size: 10px;">Ant desgn</a> <a href="/tags/Array/" style="font-size: 10px;">Array</a> <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/IE/" style="font-size: 10px;">IE</a> <a href="/tags/IMG/" style="font-size: 10px;">IMG</a> <a href="/tags/JavaScript/" style="font-size: 20px;">JavaScript</a> <a href="/tags/Object/" style="font-size: 10px;">Object</a> <a href="/tags/apply/" style="font-size: 10px;">apply</a> <a href="/tags/a%E6%A0%87%E7%AD%BE/" style="font-size: 10px;">a标签</a> <a href="/tags/bind/" style="font-size: 10px;">bind</a> <a href="/tags/call/" style="font-size: 10px;">call</a> <a href="/tags/deeplearn-js/" style="font-size: 10px;">deeplearn.js</a> <a href="/tags/nodeJS/" style="font-size: 15px;">nodeJS</a> <a href="/tags/npm/" style="font-size: 15px;">npm</a> <a href="/tags/react/" style="font-size: 10px;">react</a> <a href="/tags/webpack/" style="font-size: 15px;">webpack</a> <a href="/tags/yarn/" style="font-size: 10px;">yarn</a> <a href="/tags/%E5%85%8D%E8%B4%B9API/" style="font-size: 10px;">免费API</a> <a href="/tags/%E5%85%BC%E5%AE%B9%E6%80%A7/" style="font-size: 15px;">兼容性</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 20px;">前端</a> <a href="/tags/%E5%AF%B9%E8%B1%A1/" style="font-size: 10px;">对象</a> <a href="/tags/%E6%8E%A5%E5%8F%A3/" style="font-size: 10px;">接口</a> <a href="/tags/%E6%95%B0%E7%BB%84/" style="font-size: 10px;">数组</a> <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" style="font-size: 10px;">机器学习</a> <a href="/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" style="font-size: 15px;">深度学习</a>
         </div>
     </div>
 </div>
